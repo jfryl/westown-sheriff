@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+<h1>Bonjour {{ user.firstName }}</h1>
+    Vos informations, vos parties...
+    <a href="{{ path('new_game') }}">Créer une partie</a>
+{% endblock %}

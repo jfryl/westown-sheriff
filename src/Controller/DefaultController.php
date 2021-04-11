@@ -26,13 +26,13 @@ class DefaultController extends AbstractController
     public function sendMail(MailerInterface $mailer)
     {
         $email = (new TemplatedEmail())
-            ->to('david.annebicque@gmail.com')
-            ->from('david.annebicque@univ-reims.fr')
+            ->to('anarchonos1@gmail.com')
+            ->from('joffrey.lefebvre@etudiant.univ-reims.fr')
             ->subject('Test d un mail')
             ->htmlTemplate('mail/mail.html.twig')
             ->context([
-                'prenom' => 'david',
-                'nom' => 'Annebicque',
+                'prenom' => 'joffrey',
+                'nom' => 'Lefebvre',
             ]);
 
         $mailer->send($email);

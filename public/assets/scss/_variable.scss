@@ -1,0 +1,33 @@
+// color
+    $yellow: #F2B138;
+    $brown: #40281F;
+    $brownMat: #523837;
+    $white: #ffffff;
+    $green: #4a3e15;
+    $greenLight: #715a02;
+    $red: #8b4837;
+
+// font
+    // familly
+        $title-font: 'Rye';
+        @font-face{
+            font-family: 'Rye';
+            src: url('../font/Rye-Regular.ttf');
+        }
+
+        $text-font: 'Oswald';
+        @font-face{
+            font-family: 'Oswald';
+            src: url('../font/Oswald-Regular.ttf');
+        }
+    // size
+    $newsletter: 90px;
+    // $title: 50px;
+    $title: 2.9vw;
+    $button: 40px;
+    // $menu: 24px;
+    $menu: 1.5vw;
+    // $text: 18px;
+    $text: 1.3vw;
+
+

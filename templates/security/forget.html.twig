@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Welcome!{% endblock %}
+
+{% block body %}
+<main id="index">
+    <section class="main-connexion">
+        <span style="visibility: hidden;" id="top"></span>
+
+        <h1>Vous avez oublié votre mot de passe ?</h1>
+        <p class="recup">Entrez votre email, un email de récupération vous sera envoyé.</p>
+        <form action="newMdp.php">
+            <div id="form-connexion">
+                <div class="cont-form">
+                    <label for="mail">Mail</label>
+                    <input type="email" name="mail" id="mail" placeholder="Rentrez votre adresse mail..." required>
+                </div>
+            </div>
+
+            <div id="retour-link-cont">
+                <p class="retour-link-p"><a class="retour-link" href="{{ path('app_login') }}">Retour</a></p>
+            </div>
+
+            <div id="submit-connexion">
+                <input type="submit" value="Continuer">
+            </div>
+        </form>
+    </section>
+</main>
+{% endblock %}
+

@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Westown Sheriff{% endblock %}
+
+{% block body %}
+    <main id="index">
+        <section class="head">
+            <span style="visibility: hidden;" id="top"></span>
+            <div id="text-head">
+                <h1>Venu conquérir Westown ?</h1>
+                <p class="intro">Découvrez le nouveau duel de shérif du western, Aﬁn de conquérir la ville de Westown vous allez devoir user de stratégie, de rage et de combativité pour devenir le shérif de cette ville ! Usée de vos talents pour mettre de votre côté les différents acteurs importants de la ville et avoir leurs soutiens ...</p>
+            </div>
+        </section>
+
+        <section id="westown">
+            <article id="text-westown">
+                <h2>Westown shériff</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus ipsum sunt molestiae nihil quos nam obcaecati ullam, at eius. Quas nemo omnis id tempore quisquam beatae quia provident, praesentium quam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quibusdam soluta eius maxime minima odit consequatur aut accusamus molestias voluptas laborum quas vel modi, nobis explicabo eaque ea minus facilis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, iste. Minus cupiditate consectetur exercitationem deserunt velit corrupti quos impedit. Earum repellat ipsum rerum perferendis illum nemo deleniti tempore dolore modi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, voluptate! Necessitatibus asperiores rerum quisquam nisi id suscipit, amet magni quis reiciendis fugit in illum distinctio soluta iure temporibus nemo veritatis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic esse est tenetur dolorem aut quasi eius, voluptate consequuntur vitae ipsum asperiores. Dignissimos, impedit quos. Cumque tenetur similique expedita earum odio. Nobis, voluptate! Necessitatibus asperiores rerum quisquam nisi id suscipit, amet magni quis reiciendis fugit in illum distinctio soluta iure temporibus nemo veritatis? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </article>
+
+            <article id="packaging">
+                <img id="packaging-img" src="{{ asset('assets/img/replace.png') }}" alt="Replace">
+            </article>
+        </section>
+
+        <section id="rules">
+            <h3>Règles du jeu</h3>
+            <div id="replace-rules"></div>
+            <img class="illu-rules" id="illu-sign" width="30%" src="{{ asset('assets/img/far-west.svg') }}" alt="Panneau Far West">
+            <img class="illu-rules" id="illu-barrel" width="20%" src="{{ asset('assets/img/barrel-icon.svg') }}" alt="Tonneau">
+        </section>
+
+        <section id="jouer">
+            <img src="{{ asset('assets/img/barillet.png') }}" alt="Illustration d'un barillet">
+            <img src="{{ asset('assets/img/etoile.png') }}" alt="Illustration d'une étoile de shériff">
+            <h2>Prenez le contrôle de la ville !</h2>
+            <a href="">Jouer</a>
+        </section>
+    </main>
+
+{% endblock %}

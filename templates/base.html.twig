@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{  asset('assets/css/style.css') }}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    {% endblock %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="{{  asset('assets/js/app.js') }}"></script>
+    {% block javascripts %}
+        {# {{ encore_entry_script_tags('app') }} #}
+    {% endblock %}
+</head>
+<body>
+<header>
+    <nav class="nav" id="highSize">
+        <ul>
+            <h1>
+                <img src="{{ asset('assets/img/logo.png') }}" alt="Logo du jeu">
+            </h1>
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <!-- si l'utilisateur est connecté -->
+                    <li>
+                        <ul>
+                            <li>
+                                <a href="{{ path('default') }}" class="link-nav">Accueil</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('user_profil') }}" class="link-nav">Profil</a>
+                            </li>
+                            <li>
+                                <a href="/jeu/classement.php" class="link-nav">Classement</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <a href="/jeu/en/index.php" class="link-nav">En</a>
+                            </li>
+                            <li>
+                                <a href="/jeu/jouer.php">Jouer</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('app_logout') }}">Me déconnecter</a>
+                            </li>
+                        </ul>
+                    </li>
+                {% else %}
+                    <!-- si l'utilisateur n'est pas connecté -->
+                    <li>
+                        <ul>
+                            <li>
+                                <a href="{{ path('default') }}" class="link-nav">Accueil</a>
+                            </li>
+                            <li>
+                                <a href="/jeu/classement.php" class="link-nav">Classement</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <a href="/jeu/en/index.php" class="link-nav">En</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('app_login') }}">Connexion</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('app_register') }}">Deviens membre</a>
+                            </li>
+                        </ul>
+                    </li>
+                {% endif %}
+        </ul>
+    </nav>
+</header>
+
+    {% block body %}{% endblock %}
+
+<footer>
+    <p>
+        <span>Copyright &#169; Fractal 2021</span> - <span><a href="information/CGU.php">CGU</a> - <a href="information/cookies.php">Cookies</a></span>
+    </p>
+</footer>
+</body>
+</html>

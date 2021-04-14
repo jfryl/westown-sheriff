@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div id="plateau">
+{{ render(controller('App\\Controller\\GameController::refreshPlateauGame', {game:game.id})) }}
+</div>
+
+<div id="message">...</div>
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block javascripts %}
+<script>
+  let boucle
+  $(document).ready(function(){
+    boucle = setInterval(refreshGame, 3000);
+  })
+
+  $(document).on('click', '#finDeTour', function() {
+    //mettre à jour game en changeant quiJoue
+    //Bloquer le plateau (overlay, ...)
+    //Relancer le timer...
+  })
+
+  function refreshGame() {
+    $.ajax({
+      url: "{{ path('get_tour', {game: game.id}) }}",
+      success: function(data) {
+        console.log(data)
+        if (data == false) {
+          $('#message').html('Tour de votre adversaire')
+        } else {
+          $('#message').html('C\'est mon tour...')
+          //mettre à jour le plateau, dès que je récupère true
+          clearInterval(boucle)
+        }
+      },
+      error: function(){
+
+      }
+    })
+  }
+
+  let action
+    $(document).on('click', '#secret', function(){
+      console.log('secret')
+      action = 'secret' //mémorise l'action en cours
+      $('.choixSecret').show()
+      $('#valider').show()
+    })
+
+    $(document).on('click', '#valider', function(){
+      switch (action) {
+        case 'secret':
+            donneesAction = {
+              action: 'secret',
+              carte: $('input[name="carte_secret"]:checked').val(),
+            }
+          break;
+        case 'depot':
+
+          break;
+        case 'offre':
+
+          break;
+        case 'echange':
+
+          break;
+      }
+
+      $.ajax({
+        url: "{{ path('action_game', {game: game.id}) }}",
+        data: donneesAction,
+        method: 'POST',
+        success: function(data) {
+            if (data == true) {
+              $('#plateau').load("{{ path('refresh_plateau_game', {game:game.id}) }}")
+            }
+        },
+        error: function(){
+
+        }
+      })
+    })
+</script>
+{% endblock %}

@@ -3,7 +3,605 @@
 {% block title %}Profil{% endblock %}
 
 {% block body %}
-<h1>Bonjour {{ user.firstName }}</h1>
-    Vos informations, vos parties...
-    <a href="{{ path('new_game') }}">Créer une partie</a>
+    <main id="main">
+        <span style="visibility: hidden;" id="top"></span>
+        <section id="infosProfil">
+            <div id="contentTable">
+                <img src="{{ asset('assets/img/logo.png') }}" alt="">
+                <div id="table">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="" alt="">
+                </div>
+                <div>
+                    <h1>Salut Shérif <span>{{ user.Pseudo }}
+                            <!-- pseudo du joueur -->
+                        </span>, prêt(e) à conquérir Westown ?</h1>
+                    <div>
+                        <div>
+                            <h2>Mes statistiques :</h2>
+                            <p>Vous avez gagné(e) <span>5</span> parties au total</p>
+                            <p>Vous avez perdu(e) <span>10</span> parties au total</p>
+                            <p>Vous avez gagné(e) <span>250</span> points au total</p>
+                            <p>Votre record est de : <span></span></p>
+                        </div>
+                        <div>
+                            <h2>Mon classement :</h2>
+                            <p>Vous êtes actuellement <span>15</span>ème</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="mesInfos">
+                    <div class="conteneurInfos">
+                        <div>
+                            <h2>Pseudo :</h2>
+                            &nbsp;
+                            <span>{{ user.Pseudo }}</span> <!-- pseudo du joueur -->
+                        </div>
+                        <div>
+                            <h2>Nom :</h2>
+                            &nbsp;
+                            <span>{{user.Lastname}}</span> <!-- nom du joueur -->
+                        </div>
+                        <div>
+                            <h2>Prénom :</h2>
+                            &nbsp;
+                            <span>{{user.Firstname}}</span> <!-- prenom du joueur -->
+                        </div>
+                        <div>
+                            <h2>Âge :</h2>
+                            &nbsp;
+                            <span>19ans</span> <!-- age du joueur -->
+                        </div>
+                        <div>
+                            <p>Inscrit(e) depuis le <span>5 février 2021
+                                    <!-- date d'inscription -->
+                                </span></p>
+                            <p>
+                                <a href="#" id="showInfos">Voir plus...</a>
+                            </p>
+                        </div>
+                    </div>
+                    <a href="#" id="modifieInfos">Modifier mes informations</a>
+                </div>
+                <div id="move">
+                    <div>
+                        <!-- conteneur bloc parti + invitation -->
+                        <div>
+                            <h3>Mes parties :</h3>
+                            <div>
+                                <a href="#" id="joinPart">
+                                    Reprendre ma partie
+                                    <img src="{{ asset('assets/img/picto/play.png') }}" alt="">
+                                </a>
+                                <a href="#" id="launchFriend">
+                                    Relancer un ami
+                                    <img src="{{ asset('assets/img/picto/rotate.png') }}" alt="">
+                                </a>
+                                <a href="#" id="deletePart">
+                                    Supprimer une partie
+                                    <img src="{{ asset('assets/img/picto/delete.png') }}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Mes invitations&nbsp;<span>(150)
+                                    <!-- nombre d'invitation -->
+                                </span></h3>
+                            <div>
+                                <p>
+                                    <a href="">
+                                        <span>Deiteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</span> vous invite à jouer
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="">
+                                        <span>Camille</span> vous invite à jouer
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="">
+                                        <span>Clara</span> vous invite à jouer
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- conteneur bloc new partie -->
+                        <h3>Débuter une nouvelle partie</h3>
+                        <div>
+                            <a href="#" id="createTable">
+                                Créer une table
+                                <img src="{{ asset('assets/img/picto/play.png') }}" alt="">
+                            </a>
+                            <a href="#" id="chooseTable">
+                                Choisir une table
+                                <img src="{{ asset('assets/img/picto/arrow.png') }}" alt="">
+                            </a>
+                            <a href="#" id="inviteFriend">
+                                Inviter un ami
+                                <img src="{{ asset('assets/img/picto/add.png') }}" alt="">
+                            </a>
+                            <a href="#" id="invitePlayer">
+                                Inviter un joueur
+                                <img src="{{ asset('assets/img/picto/add.png') }}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="blur"></div>
+                <div id="friends">
+                    <div>
+                        <h3>Mes amis</h3>
+                        <div>
+                            <h4>En ligne (20) :<span>
+                                    <!-- nombre d'amis en ligne -->
+                                </span></h4>
+                            <div>
+                                <p>
+                                    <a href="">
+                                        <!-- nom du joueur -->Deiteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="">Camille</a>
+                                </p>
+                                <p>
+                                    <a href="">Clara</a>
+                                </p>
+                                <p>
+                                    <a href="">Luc</a>
+                                </p>
+                                <p>
+                                    <a href="">Lucas</a>
+                                </p>
+                                <p>
+                                    <a href="">Florent</a>
+                                </p>
+                                <p>
+                                    <a href="">FRACTAAAAAL</a>
+                                </p>
+                                <p>
+                                    <a href="">Joeffrey</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Hors-ligne :<span>
+                                    <!-- nombre d'amis en ligne -->
+                                </span></h4>
+                            <div>
+                                <p>
+                                    <a href="">
+                                        <!-- nom du joueur -->
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="">Pil-poil</a>
+                                </p>
+                                <p>
+                                    <a href="">Plume plume</a>
+                                </p>
+                                <p>
+                                    <a href="">Buzz l'éclair</a>
+                                </p>
+                                <p>
+                                    <a href="">Pil-poil</a>
+                                </p>
+                                <p>
+                                    <a href="">Plume plume</a>
+                                </p>
+                                <p>
+                                    <a href="">Buzz l'éclair</a>
+                                </p>
+                                <p>
+                                    <a href="">Pil-poil</a>
+                                </p>
+                                <p>
+                                    <a href="">Plume plume</a>
+                                </p>
+                                <p>
+                                    <a href="">Buzz l'éclair</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Tables</h3>
+                        <div>
+                            <p>
+                                <a href="">
+                                    <!-- nom de la table -->
+                                </a>
+                            </p>
+                            <p>
+                                <a href="">You</a>
+                            </p>
+                            <p>
+                                <a href="">spin</a>
+                            </p>
+                            <p>
+                                <a href="">me</a>
+                            </p>
+                            <p>
+                                <a href="">right</a>
+                            </p>
+                            <p>
+                                <a href="">round</a>
+                            </p>
+                            <p>
+                                <a href="">baby</a>
+                            </p>
+                            <p>
+                                <a href="">right</a>
+                            </p>
+                            <p>
+                                <a href="">round</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- pop-up -->
+    <section id="popUp">
+        <div id="contentModifieInfos">
+            <div>
+                <div id="closeModifieInfos">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <h2>Informations</h2>
+            <form action="" method="POST" enctype="multipart/form-data" class="InfosProfil">
+                <div>
+                    <div id="imgPart">
+                        <div>
+                            <img src="/jeu/assets/img/" alt="">
+                        </div>
+                        <label for="filesProfil">Modifier Avatar</label>
+                        <input type="file" id="filesProfil">
+                    </div>
+                    <div id="infosPart">
+                        <div>
+                            <label for="valuePseudoModif">Pseudo :</label>
+                            <input type="text" placeholder="Votre pseudo" name="pseudo" id="valuePseudoModif">
+                        </div>
+                        <div>
+                            <label for="valueModifMotDePasse">Mot de passe :</label>
+                            <input type="password" placeholder="Votre mot de passe" name="password" id="valueModifMotDePasse">
+                            <span id="buttonMotDePasse"></span>
+                        </div>
+                        <div>
+                            <label for="valueModifPrenom">Prénom :</label>
+                            <input type="text" placeholder="Votre prénom" name="firstname" id="valueModifPrenom">
+                        </div>
+                        <div>
+                            <label for="valueModifNom">Nom :</label>
+                            <input type="text" placeholder="Votre nom" name="lastname" id="valueModifNom">
+                        </div>
+                        <div>
+                            <label for="valueModifAge">Age :</label>
+                            <input type="number" min="0" max="150" placeholder="Votre âge" name="age" id="valueModifAge">
+                        </div>
+                        <div>
+                            <p><span>Email :</span> Mail utilisateur</p>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Modifier le profil">
+            </form>
+        </div>
+
+        <div id="contentShowInfos">
+            <div>
+                <div id="closeShowInfos">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <h2>Informations</h2>
+            <form action="#" class="InfosProfil">
+                <div>
+                    <div id="imgPart">
+                        <div>
+                            <img src="/jeu/assets/img/" alt="">
+                        </div>
+                    </div>
+                    <div id="infosPart">
+                        <div>
+                            <p><span>Pseudo :</span> Pseudo</p>
+                        </div>
+                        <div>
+                            <label for="showModifMotDePasse">Mot de passe :</label>
+                            <input type="password" value="mon mot de passe" name="password" id="showModifMotDePasse">
+                            <span id="buttonShowMotDePasse"></span>
+                        </div>
+                        <div>
+                            <p><span>Prénom :</span> Prénom de l'utilisateur</p>
+                        </div>
+                        <div>
+                            <p><span>Nom :</span> Nom de l'utilisateur</p>
+                        </div>
+                        <div>
+                            <p><span>Age :</span> Age de l'utilisateur</p>
+                        </div>
+                        <div>
+                            <p><span>Email :</span> Mail l'utilisateur</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div id="contentJoinPart">
+            <div>
+                <div id="closeJoinPart">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <h2>Voulez-vous reprendre votre partie ?</h2>
+            <div>
+                <a href="#">Combattre !</a>
+                <a href="#">Refuser</a>
+            </div>
+        </div>
+
+        <div id="contentLaunchFriend">
+            <div>
+                <div id="closeLaunchFriend">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <h2>Quel ami voulez-vous relancer ?</h2>
+            <div class="anyPart">
+                <svg version="1.1" x="0px" y="0px" viewBox="0 0 321.7 321.7" style="enable-background:new 0 0 321.7 321.7;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <g>
+                                <path class="st0" d="M314.43,129.41v0.52c-0.04,0.18-0.04,0.35-0.08,0.56c0,0.08,0,0.18-0.02,0.24c0,0.18-0.04,0.34-0.04,0.53 c-0.03,0.1-0.03,0.21-0.07,0.31c-0.08,0.35-0.18,0.73-0.29,1.08c-1.35,4.47-5.55,7.71-10.47,7.71c-0.28,0-0.55,0-0.83-0.04 c-0.29,0-0.56-0.03-0.81-0.06c-0.24-0.04-0.49-0.08-0.74-0.14c0,0-0.03,0-0.07,0c-0.24-0.08-0.52-0.14-0.77-0.21 c-0.02,0-0.02,0-0.02-0.04c-0.24-0.07-0.49-0.13-0.7-0.24c-0.22-0.07-0.43-0.13-0.6-0.24c-0.11-0.03-0.18-0.07-0.24-0.1 c-0.18-0.07-0.39-0.18-0.56-0.28c-0.42-0.24-0.8-0.49-1.18-0.77c-0.1-0.07-0.21-0.17-0.32-0.24c0,0,0,0,0-0.03 c-0.13-0.1-0.28-0.21-0.42-0.32c-0.17-0.17-0.38-0.34-0.55-0.52c-0.14-0.18-0.28-0.31-0.42-0.49c-0.14-0.14-0.24-0.28-0.34-0.42 l-0.14-0.14c-0.07-0.1-0.14-0.2-0.21-0.28c-0.08-0.11-0.14-0.21-0.21-0.35c-0.08-0.1-0.13-0.21-0.21-0.31 c-0.11-0.18-0.21-0.35-0.32-0.52c-0.1-0.21-0.24-0.45-0.34-0.7l-3.17,3.14l-59.9,58.6l14.17,81.88l0.86,5.47 c3.12-0.67,6.42,0.04,8.97,2c0.75,0.57,1.44,1.24,2.03,2.01l0.57,0.8c3.01,4.75,1.97,11.02-2.44,14.51 c-0.14,0.11-0.29,0.22-0.43,0.32c-4.86,3.48-11.57,2.43-15.13-2.32c-0.09-0.06-0.13-0.11-0.2-0.2c-0.03-0.06-0.08-0.11-0.09-0.2 l-0.14-0.2c-0.13-0.2-0.23-0.39-0.33-0.53c-0.08-0.11-0.11-0.21-0.2-0.33c-0.03-0.06-0.04-0.13-0.09-0.19 c-0.03-0.06-0.06-0.13-0.1-0.19c-0.09-0.19-0.2-0.41-0.29-0.65c-0.06-0.21-0.18-0.43-0.24-0.64c-0.99-3.07-0.6-6.43,1.03-9.14 l-4.91-2.6l-73.01-40.7l-3.92,2.02l-0.03,0.02L80.1,286c2.24,4.7,0.85,10.44-3.55,13.58c-2.44,1.75-5.36,2.34-8.12,1.91 c-2.76-0.48-5.39-1.99-7.16-4.45l-0.3-0.43c-0.08-0.15-0.18-0.31-0.27-0.5c-0.04-0.06-0.1-0.13-0.12-0.21 c-0.1-0.14-0.18-0.3-0.28-0.45c-0.03-0.1-0.09-0.19-0.12-0.29c-0.14-0.33-0.29-0.7-0.4-1.05c-1.5-4.43,0.03-9.49,4.03-12.36 c0.23-0.17,0.45-0.32,0.7-0.45c0.23-0.17,0.49-0.3,0.7-0.42c0.22-0.11,0.44-0.22,0.69-0.31c0,0,0.02-0.02,0.06-0.04 c0.24-0.08,0.5-0.19,0.75-0.28c0.02-0.01,0.02-0.01,0.03,0.01c0.24-0.08,0.49-0.17,0.72-0.2c0.21-0.07,0.42-0.14,0.62-0.15 c0.11-0.03,0.19-0.03,0.27-0.06c0.18-0.04,0.41-0.08,0.62-0.1c0.48-0.04,0.93-0.07,1.41-0.07c0.12,0,0.27,0.02,0.4,0.02 c0,0,0,0,0.02,0.02c0.17,0,0.34,0.01,0.52,0.02c0.24,0.03,0.51,0.06,0.75,0.1c0.22,0.06,0.41,0.09,0.63,0.14 c0.19,0.04,0.35,0.09,0.52,0.14l0.2,0.03c0.12,0.06,0.23,0.09,0.33,0.11c0.12,0.04,0.23,0.09,0.38,0.17 c0.12,0.03,0.23,0.09,0.35,0.12c0.19,0.09,0.38,0.17,0.56,0.24c0.2,0.11,0.45,0.23,0.69,0.38l0.75-4.41l14.84-81.12l-63.07-61.74 c-1.71,3.8-5.55,6.45-9.98,6.45h-0.56c-0.24,0-0.45-0.04-0.66-0.08h-0.03c-0.29,0-0.53-0.07-0.77-0.1 c-0.21-0.03-0.45-0.11-0.66-0.14c-0.07-0.02-0.13-0.02-0.24-0.07c-0.21-0.03-0.41-0.11-0.6-0.18c-0.02,0-0.06-0.03-0.06-0.03 c-0.25-0.07-0.53-0.18-0.74-0.28c-0.03,0-0.03,0-0.03,0c-0.24-0.11-0.45-0.24-0.7-0.35c-0.03,0-0.03-0.03-0.08-0.03 c-0.21-0.1-0.41-0.24-0.62-0.34c-0.22-0.14-0.46-0.29-0.67-0.45c-0.13-0.11-0.27-0.21-0.41-0.32c-0.1-0.07-0.18-0.13-0.29-0.24 c-0.13-0.11-0.24-0.21-0.38-0.35c-0.08-0.02-0.14-0.1-0.21-0.18c-0.11-0.1-0.18-0.2-0.28-0.31c-0.15-0.1-0.25-0.24-0.35-0.39 c-0.07-0.07-0.14-0.13-0.18-0.2c-0.13-0.18-0.28-0.35-0.42-0.53c0-0.03-0.03-0.03-0.03-0.07c-0.17-0.21-0.32-0.45-0.45-0.66 c0-0.04,0-0.04-0.03-0.08c-0.11-0.21-0.24-0.41-0.35-0.62c0-0.08-0.03-0.11-0.07-0.14c-0.11-0.25-0.21-0.5-0.31-0.76 c-0.11-0.24-0.21-0.53-0.32-0.81c-0.13-0.49-0.28-1.02-0.34-1.54c-0.11-0.55-0.14-1.12-0.14-1.71c0-2.9,1.12-5.48,2.93-7.43 c1.99-2.17,4.89-3.53,8.07-3.53c5.37,0,9.87,3.88,10.78,9l89.29-13.12L154.04,43l2.49-4.96c-2.94-1.26-5.21-3.77-6.15-6.84 c-0.29-0.91-0.45-1.85-0.5-2.83v-0.97c0.31-5.61,4.8-10.11,10.42-10.39c0.18-0.01,0.36-0.01,0.54-0.01 c5.98,0,10.83,4.74,10.96,10.68c0.03,0.1,0.03,0.18,0.03,0.29c0,0.06,0,0.13-0.03,0.21v0.24c0,0.24-0.03,0.45-0.03,0.62 c0,0.14-0.04,0.24-0.04,0.39c0,0.07-0.03,0.14-0.03,0.21s-0.02,0.13-0.02,0.21c-0.04,0.21-0.08,0.45-0.15,0.7 c-0.07,0.21-0.1,0.45-0.17,0.66c-0.98,3.07-3.25,5.58-6.15,6.84l2.48,4.96l35.68,71.34l4.35,0.63h0.04l84.92,12.49 c0.91-5.12,5.37-9,10.78-9c3.01,0,5.73,1.22,7.71,3.17C313.17,123.62,314.43,126.38,314.43,129.41z" />
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <p>Vous n'avez affronté aucun joueur récement</p>
+            </div>
+
+            <!-- <form action="" method="POST">
+                <div class="table3">
+                    <div class="thead">
+                        <div class="tr">
+                            <p></p>
+                            <p>Nom du joueur</p>
+                            <p>Nom de la dernière partie</p>
+                            <p>État de la partie</p>
+                        </div>
+                    </div>
+                    <div class="tbody">
+                        <div class="tr">
+                            <input type="radio" name="launchFriend" id="inputLaunchFriend1">
+                            <label for="inputLaunchFriend1">
+                                <p>1</p>
+                                <p>Nom du joueur</p>
+                                <p>Nom de la dernière partie jouer</p>
+                                <p>Etat de la partie</p>
+                            </label>
+                        </div>
+                        <div class="tr">
+                            <input type="radio" name="launchFriend" id="inputLaunchFriend2">
+                            <label for="inputLaunchFriend2">
+                                <p>2</p>
+                                <p>Nom du joueur</p>
+                                <p>Nom de la dernière partie jouer</p>
+                                <p>Etat de la partie</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Inviter">
+            </form> -->
+        </div>
+
+        <div id="contentDeletePart">
+            <div>
+                <div id="closeDeletePart">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <h2>Quel ami voulez-vous relancer ?</h2>
+            <form action="" method="POST">
+                <div class="table4">
+                    <div class="thead">
+                        <div class="tr">
+                            <p></p>
+                            <p>Nom de la partie</p>
+                            <p>Nom de l'adversaire</p>
+                            <p>Vos points</p>
+                            <p>Points adverse</p>
+                        </div>
+                    </div>
+                    <div class="tbody">
+                        <div class="tr">
+                            <input type="radio" name="deletePart" id="inputDeletePart1">
+                            <label for="inputDeletePart1">
+                                <p>1</p>
+                                <p>Nom de la partie</p>
+                                <p>Nom de l'adversaire</p>
+                                <p>Vos points</p>
+                                <p>Points adverse</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Supprimer">
+            </form>
+        </div>
+
+        <div id="contentCreateTable">
+            <div>
+                <div id="closeCreateTable">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <h2>Créer une table ?</h2>
+            <form action="">
+                <label for="inputCreateTable">Nom de la table</label>
+                <input type="text" name="inputCreateTable" id="inputCreateTable" placeholder="Nom de la table...">
+                <input type="submit" value="Combattre !">
+            </form>
+        </div>
+
+        <div id="contentChooseTable">
+            <div>
+                <div id="closeChooseTable">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <h2>Quel table choisir ?</h2>
+            <!-- si l'utilisateur n'a jamais joué -->
+            <div class="anyPart">
+                <svg version="1.1" x="0px" y="0px" viewBox="0 0 321.7 321.7" style="enable-background:new 0 0 321.7 321.7;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <g>
+                                <path class="st0" d="M314.43,129.41v0.52c-0.04,0.18-0.04,0.35-0.08,0.56c0,0.08,0,0.18-0.02,0.24c0,0.18-0.04,0.34-0.04,0.53 c-0.03,0.1-0.03,0.21-0.07,0.31c-0.08,0.35-0.18,0.73-0.29,1.08c-1.35,4.47-5.55,7.71-10.47,7.71c-0.28,0-0.55,0-0.83-0.04 c-0.29,0-0.56-0.03-0.81-0.06c-0.24-0.04-0.49-0.08-0.74-0.14c0,0-0.03,0-0.07,0c-0.24-0.08-0.52-0.14-0.77-0.21 c-0.02,0-0.02,0-0.02-0.04c-0.24-0.07-0.49-0.13-0.7-0.24c-0.22-0.07-0.43-0.13-0.6-0.24c-0.11-0.03-0.18-0.07-0.24-0.1 c-0.18-0.07-0.39-0.18-0.56-0.28c-0.42-0.24-0.8-0.49-1.18-0.77c-0.1-0.07-0.21-0.17-0.32-0.24c0,0,0,0,0-0.03 c-0.13-0.1-0.28-0.21-0.42-0.32c-0.17-0.17-0.38-0.34-0.55-0.52c-0.14-0.18-0.28-0.31-0.42-0.49c-0.14-0.14-0.24-0.28-0.34-0.42 l-0.14-0.14c-0.07-0.1-0.14-0.2-0.21-0.28c-0.08-0.11-0.14-0.21-0.21-0.35c-0.08-0.1-0.13-0.21-0.21-0.31 c-0.11-0.18-0.21-0.35-0.32-0.52c-0.1-0.21-0.24-0.45-0.34-0.7l-3.17,3.14l-59.9,58.6l14.17,81.88l0.86,5.47 c3.12-0.67,6.42,0.04,8.97,2c0.75,0.57,1.44,1.24,2.03,2.01l0.57,0.8c3.01,4.75,1.97,11.02-2.44,14.51 c-0.14,0.11-0.29,0.22-0.43,0.32c-4.86,3.48-11.57,2.43-15.13-2.32c-0.09-0.06-0.13-0.11-0.2-0.2c-0.03-0.06-0.08-0.11-0.09-0.2 l-0.14-0.2c-0.13-0.2-0.23-0.39-0.33-0.53c-0.08-0.11-0.11-0.21-0.2-0.33c-0.03-0.06-0.04-0.13-0.09-0.19 c-0.03-0.06-0.06-0.13-0.1-0.19c-0.09-0.19-0.2-0.41-0.29-0.65c-0.06-0.21-0.18-0.43-0.24-0.64c-0.99-3.07-0.6-6.43,1.03-9.14 l-4.91-2.6l-73.01-40.7l-3.92,2.02l-0.03,0.02L80.1,286c2.24,4.7,0.85,10.44-3.55,13.58c-2.44,1.75-5.36,2.34-8.12,1.91 c-2.76-0.48-5.39-1.99-7.16-4.45l-0.3-0.43c-0.08-0.15-0.18-0.31-0.27-0.5c-0.04-0.06-0.1-0.13-0.12-0.21 c-0.1-0.14-0.18-0.3-0.28-0.45c-0.03-0.1-0.09-0.19-0.12-0.29c-0.14-0.33-0.29-0.7-0.4-1.05c-1.5-4.43,0.03-9.49,4.03-12.36 c0.23-0.17,0.45-0.32,0.7-0.45c0.23-0.17,0.49-0.3,0.7-0.42c0.22-0.11,0.44-0.22,0.69-0.31c0,0,0.02-0.02,0.06-0.04 c0.24-0.08,0.5-0.19,0.75-0.28c0.02-0.01,0.02-0.01,0.03,0.01c0.24-0.08,0.49-0.17,0.72-0.2c0.21-0.07,0.42-0.14,0.62-0.15 c0.11-0.03,0.19-0.03,0.27-0.06c0.18-0.04,0.41-0.08,0.62-0.1c0.48-0.04,0.93-0.07,1.41-0.07c0.12,0,0.27,0.02,0.4,0.02 c0,0,0,0,0.02,0.02c0.17,0,0.34,0.01,0.52,0.02c0.24,0.03,0.51,0.06,0.75,0.1c0.22,0.06,0.41,0.09,0.63,0.14 c0.19,0.04,0.35,0.09,0.52,0.14l0.2,0.03c0.12,0.06,0.23,0.09,0.33,0.11c0.12,0.04,0.23,0.09,0.38,0.17 c0.12,0.03,0.23,0.09,0.35,0.12c0.19,0.09,0.38,0.17,0.56,0.24c0.2,0.11,0.45,0.23,0.69,0.38l0.75-4.41l14.84-81.12l-63.07-61.74 c-1.71,3.8-5.55,6.45-9.98,6.45h-0.56c-0.24,0-0.45-0.04-0.66-0.08h-0.03c-0.29,0-0.53-0.07-0.77-0.1 c-0.21-0.03-0.45-0.11-0.66-0.14c-0.07-0.02-0.13-0.02-0.24-0.07c-0.21-0.03-0.41-0.11-0.6-0.18c-0.02,0-0.06-0.03-0.06-0.03 c-0.25-0.07-0.53-0.18-0.74-0.28c-0.03,0-0.03,0-0.03,0c-0.24-0.11-0.45-0.24-0.7-0.35c-0.03,0-0.03-0.03-0.08-0.03 c-0.21-0.1-0.41-0.24-0.62-0.34c-0.22-0.14-0.46-0.29-0.67-0.45c-0.13-0.11-0.27-0.21-0.41-0.32c-0.1-0.07-0.18-0.13-0.29-0.24 c-0.13-0.11-0.24-0.21-0.38-0.35c-0.08-0.02-0.14-0.1-0.21-0.18c-0.11-0.1-0.18-0.2-0.28-0.31c-0.15-0.1-0.25-0.24-0.35-0.39 c-0.07-0.07-0.14-0.13-0.18-0.2c-0.13-0.18-0.28-0.35-0.42-0.53c0-0.03-0.03-0.03-0.03-0.07c-0.17-0.21-0.32-0.45-0.45-0.66 c0-0.04,0-0.04-0.03-0.08c-0.11-0.21-0.24-0.41-0.35-0.62c0-0.08-0.03-0.11-0.07-0.14c-0.11-0.25-0.21-0.5-0.31-0.76 c-0.11-0.24-0.21-0.53-0.32-0.81c-0.13-0.49-0.28-1.02-0.34-1.54c-0.11-0.55-0.14-1.12-0.14-1.71c0-2.9,1.12-5.48,2.93-7.43 c1.99-2.17,4.89-3.53,8.07-3.53c5.37,0,9.87,3.88,10.78,9l89.29-13.12L154.04,43l2.49-4.96c-2.94-1.26-5.21-3.77-6.15-6.84 c-0.29-0.91-0.45-1.85-0.5-2.83v-0.97c0.31-5.61,4.8-10.11,10.42-10.39c0.18-0.01,0.36-0.01,0.54-0.01 c5.98,0,10.83,4.74,10.96,10.68c0.03,0.1,0.03,0.18,0.03,0.29c0,0.06,0,0.13-0.03,0.21v0.24c0,0.24-0.03,0.45-0.03,0.62 c0,0.14-0.04,0.24-0.04,0.39c0,0.07-0.03,0.14-0.03,0.21s-0.02,0.13-0.02,0.21c-0.04,0.21-0.08,0.45-0.15,0.7 c-0.07,0.21-0.1,0.45-0.17,0.66c-0.98,3.07-3.25,5.58-6.15,6.84l2.48,4.96l35.68,71.34l4.35,0.63h0.04l84.92,12.49 c0.91-5.12,5.37-9,10.78-9c3.01,0,5.73,1.22,7.71,3.17C313.17,123.62,314.43,126.38,314.43,129.41z" />
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <p>Vous n'avez affronté aucun joueur récement</p>
+            </div>
+            <!-- si l'utilisateur à déjà fait une game
+            <form action="" method="POST">
+                <div class="table4">
+                    <div class="thead">
+                        <div class="tr">
+                            <p></p>
+                            <p>Nom de la partie</p>
+                            <p>Nom de l'adversaire</p>
+                            <p>Vos points</p>
+                            <p>Points adverse</p>
+                        </div>
+                    </div>
+                    <div class="tbody">
+                        <div class="tr">
+                            <input type="radio" name="chooseTable" id="inputChooseTable1">
+                            <label for="inputChooseTable1">
+                                <p>1</p>
+                                <p>Nom de la partie</p>
+                                <p>Nom de l'adversaire</p>
+                                <p>Vos points</p>
+                                <p>Points adverse</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Choisir">
+            </form>-->
+        </div>
+
+        <div id="contentInviteFriend">
+            <div>
+                <div id="closeInviteFriend">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <h2>Inviter un ami</h2>
+            <form action="" method="POST">
+                <div class="table3">
+                    <div class="thead">
+                        <div class="tr">
+                            <p></p>
+                            <p>Nom du joueur</p>
+                            <p>Nom de la dernière partie</p>
+                            <p>État de la partie</p>
+                        </div>
+                    </div>
+                    <div class="tbody">
+                        <div class="tr">
+                            <input type="radio" name="inviteFriend" id="inputInviteFriend1">
+                            <label for="inputInviteFriend1">
+                                <p>1</p>
+                                <p>Nom du joueur</p>
+                                <p>Nom de la dernière partie jouer</p>
+                                <p>Etat de la partie</p>
+                            </label>
+                        </div>
+                        <div class="tr">
+                            <input type="radio" name="inviteFriend" id="inputInviteFriend2">
+                            <label for="inputInviteFriend2">
+                                <p>2</p>
+                                <p>Nom du joueur</p>
+                                <p>Nom de la dernière partie jouer</p>
+                                <p>Etat de la partie</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Inviter">
+            </form>
+        </div>
+
+        <div id="contentInvitePlayer">
+            <div>
+                <div id="closeInvitePlayer">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <h2>Inviter un joueur</h2>
+            <form action="" method="POST">
+                <div id="contentSuggestionSearch">
+                    <label for="searchInput">Inviter un joueur</label>
+                    <input type="text" id="searchInput" class="input" placeholder="Nom du joueur...">
+                    <div id="suggestions"></div>
+                </div>
+                <div class="table3">
+                    <div class="thead">
+                        <div class="tr">
+                            <p></p>
+                            <p>Nom du joueur</p>
+                            <p>Nom de la dernière partie</p>
+                            <p>État de la partie</p>
+                        </div>
+                    </div>
+                    <div class="tbody">
+                        <div class="tr">
+                            <input type="radio" name="invitePlayer" id="inputInvitePlayer1">
+                            <label for="inputInvitePlayer1">
+                                <p>1</p>
+                                <p>Nom du joueur</p>
+                                <p>Nom de la dernière partie jouer</p>
+                                <p>Etat de la partie</p>
+                            </label>
+                        </div>
+                        <div class="tr">
+                            <input type="radio" name="invitePlayer" id="inputInvitePlayer2">
+                            <label for="inputInvitePlayer2">
+                                <p>2</p>
+                                <p>Nom du joueur</p>
+                                <p>Nom de la dernière partie jouer</p>
+                                <p>Etat de la partie</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Inviter">
+            </form>
+        </div>
+    </section>
 {% endblock %}

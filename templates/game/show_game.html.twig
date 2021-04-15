@@ -1,18 +1,26 @@
 {% extends 'base.html.twig' %}
+{% block stylesheets %}
+  <style>
+    nav {
+      display: none;
+    }
+  </style>
+{% endblock %}
 
 {% block body %}
-<div id="plateau">
+
+
 {{ render(controller('App\\Controller\\GameController::refreshPlateauGame', {game:game.id})) }}
-</div>
 
 <div id="message">...</div>
 {% endblock %}
 
 {% block title %}
-
+  Westown Sheriff | Jeu
 {% endblock %}
 
 {% block javascripts %}
+  <script src="{{  asset('assets/js/jouer.js') }}"></script>
 <script>
   let boucle
   $(document).ready(function(){
@@ -85,5 +93,29 @@
         }
       })
     })
+
+    /*$(document).ready(
+            function() {
+              $("#envoyerMessage").click(
+                      function() {
+                        var m = $("#message").val()
+                        $.ajax({
+                          url: "dire.php?message=" + m
+                        }).done(function() {
+                          document.getElementById("message").value = "";
+                        })
+                      }
+              )
+
+              setInterval(
+                      function() {
+                        $.ajax({
+                          url: "affichage.php"
+                        }).done(function(messagesChat) {
+                          $("#affichage").html(messagesChat)
+                        })
+                      }, 1000
+              )
+            });*/
 </script>
 {% endblock %}

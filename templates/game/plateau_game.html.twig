@@ -1,55 +1,229 @@
-<div class="row">
-    <div class="col-8">
-        Cartes de l'adversaire
-        {% for card in adversaire.handCards %}
-            <img src="{{ asset('assets/plateau/recto.png') }}" width="10%">
-            <!--<span style="border: 1px solid black; margin:3px; padding:5px">
-                {{ cards[card].number }}
-            </span>-->
-        {% endfor %}
-    </div>
-    <div class="col-4">
-        Actions
-        <button id="secreta">Secret</button>
-        <button  id="depota">Depot</button>
-        <button  id="offrea">Offre</button>
-        <button  id="echangea">Echange</button><br>
-    </div>
-</div>
-<div class="row">
-    Plateau adversaire
-</div>
-<div class="row">
-    {% for i in 1..7 %}
-        <div class="col-1">
-                <span style="border: 1px solid black; margin:3px; padding:5px">
-                    EMPL{{ i }}
-                </span>
+<body>
+<main id="index">
+    <section id="top">
+        <div id="plateau">
+            <div class="top">
+                <div>
+                    <div>
+                        <img src="{{ asset('assets/img/logo.png') }}" alt="Logo du jeu Westown Sheriff">
+                        <h3>Carte brûlée</h3>
+                    </div>
+                </div>
+                <div>
+                    {% for card in adversaire.handCards %}
+                        <img src="{{ asset('assets/img/plateau/recto.png') }}" alt="Recto de carte">
+                    {% endfor %}
+                </div>
+                <div>
+                    <div>
+                            <img src="{{ asset('assets/img/plateau/jetons/jeton_depot_anim.png') }}" alt="Jeton de dépôts">
+                    </div>
+                    <div>
+                            <img src="{{ asset('assets/img/plateau/jetons/jeton_echange_anim.png') }}" alt="Jeton d'échange">
+                    </div>
+                    <div>
+                            <img src="{{ asset('assets/img/plateau/jetons/jeton_offre_anim.png') }}" alt="Jeton d'offre">
+                    </div>
+                    <div>
+                            <img src="{{ asset('assets/img/plateau/jetons/jeton_secret_anim.png') }}" alt="Jeton de secret">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="conteneurCarte">
+                    <img src="{{ asset('assets/img/plateau/perso_barbier.png') }}" alt="Carte du personnage barbier">
+                </div>
+                <div class="conteneurCarte">
+                    <img src="{{ asset('assets/img/plateau/perso_marchand.png') }}" alt="Carte du personnage marchand">
+                </div>
+                <div class="conteneurCarte">
+                    <img src="{{ asset('assets/img/plateau/perso_bourgeoise.png') }}" alt="Carte du personnage bourgeoise">
+                </div>
+                <div class="conteneurCarte">
+                    <img src="{{ asset('assets/img/plateau/perso_tavernier.png') }}" alt="Carte du personnage tavernier">
+                </div>
+                <div class="conteneurCarte">
+                    <img src="{{ asset('assets/img/plateau/perso_indienne.png') }}" alt="Carte du personnage indienne">
+                </div>
+                <div class="conteneurCarte">
+                    <img src="{{ asset('assets/img/plateau/perso_medecin.png') }}" alt="Carte du personnage médecin">
+                </div>
+                <div class="conteneurCarte">
+                    <img src="{{ asset('assets/img/plateau/perso_banquier.png') }}" alt="Carte du personnage banquier">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div>
+                        <h3>Pioche x 8</h3>
+                        <img src="{{ asset('assets/img/plateau/recto.png') }}" alt="Recto de carte représentant le tas de pioche">
+                    </div>
+                </div>
+                <div>
+                    {% for card in moi.handCards %}
+                        <img src="{{ asset('assets/cartes/objets/'~cards[card].picture) }}" alt="Carte objet {{cards[card].name}}">
+                    {% endfor %}
+                </div>
+                <div>
+                    <div>
+                        <a href="#" id="jetonDepot">
+                            <img src="{{ asset('assets/img/plateau/jetons/jeton_depot_anim.png') }}" alt="Jeton de dépôts">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" id="jetonEchange">
+                            <img src="{{ asset('assets/img/plateau/jetons/jeton_echange_anim.png') }}" alt="Jeton d'échange">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" id="jetonOffre">
+                            <img src="{{ asset('assets/img/plateau/jetons/jeton_offre_anim.png') }}" alt="Jeton d'offre">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" id="jetonSecret">
+                            <img src="{{ asset('assets/img/plateau/jetons/jeton_secret_anim.png') }}" alt="Jeton de secret">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-    {% endfor %}
+    </section>
+    <section id="chat">
+        <div>
+            <div id="closeChat">
+                <a href="#" class="chat">
+                    <img src="{{ asset('assets/img/plateau/pictos/chat_close.png') }}" alt="">
+                </a>
+            </div>
+            <div id="openChat">
+                <a href="#" class="chat">
+                    <img src="{{ asset('assets/img/plateau/pictos/chat_open.png') }}" alt="">
+                </a>
+                <h2>Chat</h2>
+                <div id="conteneurChat">
+                    <div>
+                        <p>test :</p>
+                        <p>mon messageeeeeeeeeeeeeeeeeeeeeeeeeeee de mon message messagee messagemessagemessagemessage message message</p>
+                    </div>
+                </div>
+                <div id="conteneur-content">
+                    <input type="text" placeholder="Votre message" id="message" maxlength="250" />
+                    <button id="envoyerMessage">Envoyer</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<section id="popUp" class="plateau">
+    <div id="contentParameter">
+        <h2>MENU</h2>
+        <a href="{{ path('user_profil') }}">
+            <img src="{{ asset('assets/img/plateau/pictos/surrend_button.png') }}">
+            <span>Abandonner</span>
+        </a>
+    </div>
+    <div id="contentDepot">
+        <h2>Action dépot</h2>
+        <form action="" method="POST">
 
-</div>
-<div class="row">
-    Mon Plateau
-</div>
-<div class="row">
-    <div class="col-8">
-        {% for card in moi.handCards %}
-             <img src="{{ asset('assets/cartes/objets/'~cards[card].picture) }}" alt="{{cards[card].name}}" width="10%">
-            <span style="border: 1px solid black; margin:3px; padding:5px">
-                {{ cards[card].number }}
-                    <input type="radio" name="carte_secret" value="{{ card }}"
-                           style="display: none"
-                           class="choixSecret">
-                </span>
-        {% endfor %}
+            {% for card in moi.handCards %}
+                <input type="radio" name="choixSecret" id="premierChoixSecret">
+                <label for="ChoixSecret">
+                    <img src="{{ asset('assets/cartes/objets/'~cards[card].picture) }}" alt="ChoixSecret">
+                </label>
+            {% endfor %}
+            <div>
+                <input type="submit" value="Confirmer">
+                <a href="#" id="closeDepot">Annuler</a>
+            </div>
+        </form>
     </div>
-    <div class="col-4">
-        Mes Actions
-        <button id="secret">Secret</button>
-        <button  id="depot">Depot</button>
-        <button  id="offre">Offre</button>
-        <button  id="echange">Echange</button><br>
-        <button id="valider" style="display: none">Valider action</button>
+    <div id="contentEchange">
+        <h2>Action échange</h2>
+        <form action="" method="POST">
+
+            {% for card in moi.handCards %}
+                <input type="radio" name="choixSecret" id="premierChoixSecret">
+                <label for="premierChoixSecret">
+                    <img src="{{ asset('assets/cartes/objets/'~cards[card].picture) }}" alt="premierChoixSecret">
+                </label>
+            {% endfor %}
+
+            <div>
+                <input type="submit" value="Confirmer">
+                <a href="#" id="closeEchange">Annuler</a>
+            </div>
+        </form>
     </div>
-</div>
+    <div id="contentOffre">
+        <h2>Action offre</h2>
+        <form action="" method="POST">
+            {% for card in moi.handCards %}
+                <input type="radio" name="choixSecret" id="premierChoixSecret">
+                <label for="premierChoixSecret">
+                    <img src="{{ asset('assets/cartes/objets/'~cards[card].picture) }}" alt="">
+                </label>
+            {% endfor %}
+            <div>
+                <input type="submit" value="Confirmer">
+                <a href="#" id="closeOffre">Annuler</a>
+            </div>
+        </form>
+    </div>
+    <div id="contentSecret">
+        <h2>Action secret</h2>
+        <form action="" method="POST">
+            {% for card in moi.handCards%}
+                <input type="radio" name="choixSecret" id="premierChoixSecret">
+                <label for="premierChoixSecret">
+                <img src="{{ asset('assets/cartes/objets/'~cards[card].picture) }}" alt="">
+                </label>
+            {% endfor %}
+            <div>
+                <input type="submit" value="Confirmer">
+                <a href="#" id="closeSecret">Annuler</a>
+            </div>
+        </form>
+    </div>
+</section>
+<section id="popUpResult">
+    <div id="contentResult">
+        <h2>Résultat de la manche</h2>
+        <div class="result">
+            <div>
+                <span>Cartes gagnées</span>
+                <span>3</span>
+            </div>
+            <div>
+                <span>Points gagnés</span>
+                <span>3</span>
+            </div>
+            <div>
+                <span>Manches gagnés</span>
+                <span>3</span>
+            </div>
+        </div>
+        <div>
+            <a href="">Relancer</a>
+            <a href="">Partir</a>
+        </div>
+    </div>
+</section>
+
+<section id="parameter">
+    <div>
+        <a href="#" id="buttonParameter">
+            <img src="{{ asset('assets/img/plateau/pictos/setting_button.png') }}">
+        </a>
+    </div>
+    <div>
+        <div>
+            <img src="" alt="Photo du joueur">
+        </div>
+        <div>
+            <p>{{ game.user1.pseudo }}</p>
+            <h3>5 pts</h3>
+        </div>
+    </div>
+</section>

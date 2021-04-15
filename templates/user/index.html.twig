@@ -2,9 +2,11 @@
 
 {% block title %}Profil{% endblock %}
 
+{% block javascripts %}<script src="{{  asset('assets/js/profil.js') }}"></script>{% endblock %}
+
 {% block body %}
     <main id="main">
-        <span style="visibility: hidden;" id="top"></span>
+        <span id="top" style="visibility: hidden;"></span>
         <section id="infosProfil">
             <div id="contentTable">
                 <img src="{{ asset('assets/img/logo.png') }}" alt="">
@@ -60,7 +62,7 @@
                             <span>19ans</span> <!-- age du joueur -->
                         </div>
                         <div>
-                            <p>Inscrit(e) depuis le <span>5 février 2021
+                            <p>Inscrit(e) depuis le <span>{{ user.createdAt|date("j F Y ",false) }}
                                     <!-- date d'inscription -->
                                 </span></p>
                             <p>
@@ -251,7 +253,6 @@
             </div>
         </section>
     </main>
-    <!-- pop-up -->
     <section id="popUp">
         <div id="contentModifieInfos">
             <div>

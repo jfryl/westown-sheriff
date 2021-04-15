@@ -19,6 +19,22 @@ class DefaultController extends AbstractController
     }
 
     /**
+     * @Route("/cgu", name="cgu")
+     */
+    public function cgu(): Response
+    {
+        return $this->render('information/cgu.html.twig');
+    }
+
+    /**
+     * @Route("/cookies", name="cookies")
+     */
+    public function cookies(): Response
+    {
+        return $this->render('information/cookies.html.twig');
+    }
+
+    /**
      * @Route("/mail", name="send_mail")
      */
     public function sendMail(MailerInterface $mailer)

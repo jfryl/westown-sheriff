@@ -556,6 +556,514 @@ body main section {
   padding-top: 3%;
   padding-bottom: 5%;
 }
+body main section > div#plateau {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  background: url("../img/plateau/fond_plateau.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+body main section > div#plateau > div {
+  width: 100%;
+  height: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+body main section > div#plateau > div > div:not(.conteneurCarte) {
+  width: 30%;
+  height: 100%;
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):first-child {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 3%;
+  padding-left: 5%;
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):first-child div {
+  width: 50%;
+  height: min-content;
+  border: dashed 2px #40281F;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):first-child div img {
+  width: 100%;
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):first-child div h3 {
+  margin: 0;
+  font-family: "Rye";
+  font-size: 1.3vw;
+  font-weight: 10;
+  text-align: center;
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):nth-child(2) {
+  width: 40%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transform: rotate(5deg);
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):nth-child(2) img {
+  width: 15%;
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.5);
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):nth-child(2) img:nth-child(1) {
+  animation: secondAnimationCarte1 1s forwards;
+}
+@keyframes secondAnimationCarte1 {
+  from {
+    left: 10%;
+    top: 42%;
+    transform: rotate(-34deg);
+  }
+  to {
+    left: 10%;
+    top: 42%;
+    transform: rotate(-34deg);
+  }
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):nth-child(2) img:nth-child(2) {
+  animation: secondAnimationCarte2 1s forwards;
+}
+@keyframes secondAnimationCarte2 {
+  from {
+    left: 10%;
+    top: 42%;
+    transform: rotate(-34deg);
+  }
+  to {
+    left: 20%;
+    top: 31%;
+    transform: rotate(-22deg);
+  }
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):nth-child(2) img:nth-child(3) {
+  animation: secondAnimationCarte3 1s forwards;
+}
+@keyframes secondAnimationCarte3 {
+  from {
+    left: 10%;
+    top: 42%;
+    transform: rotate(-34deg);
+  }
+  to {
+    left: 30%;
+    top: 25%;
+    transform: rotate(-10deg);
+  }
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):nth-child(2) img:nth-child(4) {
+  animation: secondAnimationCarte4 1s forwards;
+}
+@keyframes secondAnimationCarte4 {
+  from {
+    left: 10%;
+    top: 42%;
+    transform: rotate(-34deg);
+  }
+  to {
+    left: 40%;
+    top: 23%;
+  }
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):nth-child(2) img:nth-child(5) {
+  animation: secondAnimationCarte5 1s forwards;
+}
+@keyframes secondAnimationCarte5 {
+  from {
+    left: 10%;
+    top: 42%;
+    transform: rotate(-34deg);
+  }
+  to {
+    left: 50%;
+    top: 25%;
+    transform: rotate(10deg);
+  }
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):nth-child(2) img:nth-child(6) {
+  animation: secondAnimationCarte6 1s forwards;
+}
+@keyframes secondAnimationCarte6 {
+  from {
+    left: 10%;
+    top: 42%;
+    transform: rotate(-34deg);
+  }
+  to {
+    left: 60%;
+    top: 33%;
+    transform: rotate(22deg);
+  }
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):nth-child(2) img:nth-child(7) {
+  animation: secondAnimationCarte7 1s forwards;
+}
+@keyframes secondAnimationCarte7 {
+  from {
+    left: 10%;
+    top: 42%;
+    transform: rotate(-34deg);
+  }
+  to {
+    left: 70%;
+    top: 44%;
+    transform: rotate(34deg);
+  }
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):nth-child(3) {
+  display: flex;
+  flex-wrap: wrap;
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):nth-child(3) div {
+  width: 40%;
+  height: 50%;
+  display: flex;
+  padding-bottom: 5%;
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):nth-child(3) div:first-child {
+  padding-right: 7%;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):nth-child(3) div:nth-child(2) {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):nth-child(3) div:nth-child(3) {
+  padding-right: 7%;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):nth-child(3) div:last-child {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+body main section > div#plateau > div > div:not(.conteneurCarte):nth-child(3) div img {
+  height: 50%;
+  transform: rotate(-90deg);
+  border-radius: 5px;
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.75);
+}
+body main section > div#plateau > div > div.conteneurCarte {
+  width: 10%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+}
+body main section > div#plateau > div > div.conteneurCarte:nth-child(1) {
+  animation: firstCarte1 5s forwards;
+}
+@keyframes firstCarte1 {
+  0% {
+    position: absolute;
+    left: -100%;
+  }
+  10% {
+    left: -100%;
+  }
+  40% {
+    position: absolute;
+    left: 3.75%;
+  }
+  99% {
+    position: absolute;
+    left: 3.75%;
+  }
+  100% {
+    position: relative;
+  }
+}
+body main section > div#plateau > div > div.conteneurCarte:nth-child(2) {
+  animation: firstCarte2 5s forwards;
+}
+@keyframes firstCarte2 {
+  0% {
+    position: absolute;
+    left: -100%;
+  }
+  10% {
+    left: -100%;
+  }
+  40% {
+    position: absolute;
+    left: 17.5%;
+  }
+  99% {
+    position: absolute;
+    left: 17.5%;
+  }
+  100% {
+    position: relative;
+  }
+}
+body main section > div#plateau > div > div.conteneurCarte:nth-child(3) {
+  animation: firstCarte3 5s forwards;
+}
+@keyframes firstCarte3 {
+  0% {
+    position: absolute;
+    left: -100%;
+  }
+  10% {
+    left: -100%;
+  }
+  40% {
+    position: absolute;
+    left: 31.25%;
+  }
+  99% {
+    position: absolute;
+    left: 31.25%;
+  }
+  100% {
+    position: relative;
+  }
+}
+body main section > div#plateau > div > div.conteneurCarte:nth-child(4) {
+  animation: firstCarte4 5s forwards;
+}
+@keyframes firstCarte4 {
+  0% {
+    position: absolute;
+    left: -100%;
+  }
+  10% {
+    left: -100%;
+  }
+  40% {
+    position: absolute;
+    left: 45%;
+  }
+  99% {
+    position: absolute;
+    left: 45%;
+  }
+  100% {
+    position: relative;
+  }
+}
+body main section > div#plateau > div > div.conteneurCarte:nth-child(5) {
+  animation: firstCarte5 5s forwards;
+}
+@keyframes firstCarte5 {
+  0% {
+    position: absolute;
+    left: -100%;
+  }
+  10% {
+    left: -100%;
+  }
+  40% {
+    position: absolute;
+    left: 58.75%;
+  }
+  99% {
+    position: absolute;
+    left: 58.75%;
+  }
+  100% {
+    position: relative;
+  }
+}
+body main section > div#plateau > div > div.conteneurCarte:nth-child(6) {
+  animation: firstCarte6 5s forwards;
+}
+@keyframes firstCarte6 {
+  0% {
+    position: absolute;
+    left: -100%;
+  }
+  10% {
+    left: -100%;
+  }
+  40% {
+    position: absolute;
+    left: 72.5%;
+  }
+  99% {
+    position: absolute;
+    left: 72.5%;
+  }
+  100% {
+    position: relative;
+  }
+}
+body main section > div#plateau > div > div.conteneurCarte:nth-child(7) {
+  animation: firstCarte7 5s forwards;
+}
+@keyframes firstCarte7 {
+  0% {
+    position: absolute;
+    left: -100%;
+  }
+  10% {
+    left: -100%;
+  }
+  40% {
+    position: absolute;
+    left: 86.25%;
+  }
+  99% {
+    position: absolute;
+    left: 86.25%;
+  }
+  100% {
+    position: relative;
+  }
+}
+body main section > div#plateau > div > div.conteneurCarte > img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 10px;
+}
+body main section > div#plateau > div:first-child > div:nth-child(2) {
+  transform: rotate(185deg);
+  right: 5%;
+}
+body main section > div#plateau > div:first-child > div:nth-child(2) img:nth-child(1) {
+  animation: secondAnimationCarte1 1s forwards;
+}
+@keyframes secondAnimationCarte1 {
+  from {
+    left: 9%;
+    top: 31%;
+    transform: rotate(-34deg);
+  }
+  to {
+    left: 9%;
+    top: 31%;
+    transform: rotate(-34deg);
+  }
+}
+body main section > div#plateau > div:first-child > div:nth-child(2) img:nth-child(2) {
+  animation: secondAnimationCarte2 1s forwards;
+}
+@keyframes secondAnimationCarte2 {
+  from {
+    left: 9%;
+    top: 31%;
+    transform: rotate(-34deg);
+  }
+  to {
+    left: 18%;
+    top: 20%;
+    transform: rotate(-22deg);
+  }
+}
+body main section > div#plateau > div:first-child > div:nth-child(2) img:nth-child(3) {
+  animation: secondAnimationCarte3 1s forwards;
+}
+@keyframes secondAnimationCarte3 {
+  from {
+    left: 9%;
+    top: 31%;
+    transform: rotate(-34deg);
+  }
+  to {
+    left: 27%;
+    top: 14%;
+    transform: rotate(-10deg);
+  }
+}
+body main section > div#plateau > div:first-child > div:nth-child(2) img:nth-child(4) {
+  animation: secondAnimationCarte4 1s forwards;
+}
+@keyframes secondAnimationCarte4 {
+  from {
+    left: 9%;
+    top: 31%;
+    transform: rotate(-34deg);
+  }
+  to {
+    left: 36%;
+    top: 12%;
+  }
+}
+body main section > div#plateau > div:first-child > div:nth-child(2) img:nth-child(5) {
+  animation: secondAnimationCarte5 1s forwards;
+}
+@keyframes secondAnimationCarte5 {
+  from {
+    left: 9%;
+    top: 31%;
+    transform: rotate(-34deg);
+  }
+  to {
+    left: 45%;
+    top: 14%;
+    transform: rotate(10deg);
+  }
+}
+body main section > div#plateau > div:first-child > div:nth-child(2) img:nth-child(6) {
+  animation: secondAnimationCarte6 1s forwards;
+}
+@keyframes secondAnimationCarte6 {
+  from {
+    left: 9%;
+    top: 31%;
+    transform: rotate(-34deg);
+  }
+  to {
+    left: 54%;
+    top: 20%;
+    transform: rotate(22deg);
+  }
+}
+body main section > div#plateau > div:first-child > div:nth-child(2) img:nth-child(7) {
+  animation: secondAnimationCarte7 1s forwards;
+}
+@keyframes secondAnimationCarte7 {
+  from {
+    left: 9%;
+    top: 31%;
+    transform: rotate(-34deg);
+  }
+  to {
+    left: 63%;
+    top: 33%;
+    transform: rotate(34deg);
+  }
+}
+body main section > div#plateau > div:last-child > div:first-child {
+  align-items: flex-end;
+  padding-top: 0;
+  padding-bottom: 3%;
+}
+body main section > div#plateau > div:last-child > div:first-child div {
+  align-items: center;
+}
+body main section > div#plateau > div:last-child > div:first-child div img {
+  transform: rotate(-90deg);
+  width: 50%;
+  transition: 0.5s;
+}
+body main section > div#plateau > div:last-child > div:last-child > div a {
+  height: 50%;
+}
+body main section > div#plateau > div:last-child > div:last-child > div a img {
+  height: 100%;
+  transition: 0.5s;
+}
+body main section > div#plateau > div:last-child > div:last-child > div a:hover img {
+  transform: rotate(0);
+  transition: 0.5s;
+}
 body main section.head {
   background: url("../img/illustration_accueil.png");
   background-size: cover;
@@ -565,18 +1073,18 @@ body main section.head {
   height: 100vh;
 }
 body main section.head #text-head {
-  height: 55%;
-  max-width: 45%;
+  height: 80vh;
+  width: 45%;
+  padding-top: 20vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  margin-left: 10%;
+  justify-content: flex-start;
+  padding-left: 10%;
   color: #ffffff;
 }
 body main section.head #text-head h1 {
   font-family: "Rye", sans-serif;
   font-weight: lighter;
-  margin-top: 10%;
   text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
   text-align: left;
   font-size: 2.9vw;
@@ -585,18 +1093,14 @@ body main section.head #text-head .intro {
   font-size: 25px;
   margin-top: 10%;
 }
-@media only screen and (max-width: 1500px) {
-  body main section.head {
-    height: 100vh;
-  }
-  body main section.head h1 {
-    text-align: center;
-  }
+@media screen and (max-width: 960px) {
   body main section.head #text-head {
-    max-width: 100%;
-    height: 100%;
-    margin: 0% 5%;
-    justify-content: center;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 720px) {
+  body main section.head #text-head {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -610,7 +1114,7 @@ body main section.head #text-head .intro {
   }
   body main section.head #text-head {
     height: 100%;
-    margin: 0% 5%;
+    padding: 0% 5%;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -1472,6 +1976,146 @@ body main section#jouer a:hover {
   border: solid 2px #ffffff;
   transition: 0.5s;
 }
+body main section#chat {
+  position: absolute;
+  left: 0;
+  bottom: 35%;
+}
+body main section#chat > div {
+  position: relative;
+}
+body main section#chat > div > div {
+  padding-top: 4%;
+  padding-bottom: 4%;
+  position: absolute;
+}
+body main section#chat > div div#closeChat {
+  background: #40281F;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  width: 10vh;
+  left: 0;
+  transition: 0.5s;
+}
+body main section#chat > div div#closeChat.showChat {
+  left: -30vw;
+  transition: 0.5s;
+}
+body main section#chat > div div#closeChat a {
+  min-width: 5vh;
+  max-width: 5vh;
+  width: 5vh;
+  height: 5vh;
+  transition: 0.5s;
+  display: inherit;
+  margin-left: auto;
+  margin-right: 5%;
+}
+body main section#chat > div div#closeChat a:hover {
+  transform: scale(1.05);
+}
+body main section#chat > div div#closeChat a:hover img {
+  transform: rotate(-15deg);
+}
+body main section#chat > div div#closeChat a img {
+  width: inherit;
+  transition: 0.5s;
+}
+body main section#chat > div div#openChat {
+  background: #F2B138;
+  border-top-right-radius: 30px;
+  width: 25vh;
+  padding-bottom: 0.5vh;
+  left: -30vw;
+  transition: 0.5s;
+}
+body main section#chat > div div#openChat.showChat {
+  left: 0;
+  transition: 0.5;
+}
+body main section#chat > div div#openChat > a {
+  min-width: 5vh;
+  max-width: 5vh;
+  width: 5vh;
+  height: 5vh;
+  transition: 0.5s;
+  display: inherit;
+  position: absolute;
+  right: 3%;
+  top: 3%;
+}
+body main section#chat > div div#openChat > a:hover {
+  transform: scale(1.1);
+}
+body main section#chat > div div#openChat > a:hover img {
+  transform: rotate(15deg);
+}
+body main section#chat > div div#openChat > a img {
+  width: inherit;
+  transition: 0.5s;
+}
+body main section#chat > div div#openChat h2 {
+  width: 100%;
+  text-align: center;
+  font-family: "Rye";
+  font-weight: 100;
+  margin-top: 0;
+}
+body main section#chat > div div#openChat > div#conteneurChat {
+  width: 95%;
+  max-height: 20vh;
+  padding-bottom: 2%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+body main section#chat > div div#openChat > div#conteneurChat div {
+  display: flex;
+  flex-direction: row;
+}
+body main section#chat > div div#openChat > div#conteneurChat div p {
+  margin: 0;
+  font-size: 14px;
+}
+body main section#chat > div div#openChat > div#conteneurChat div p:first-of-type {
+  font-weight: 600;
+  max-width: 35%;
+}
+body main section#chat > div div#openChat > div#conteneurChat div p:last-of-type {
+  max-width: 65%;
+  padding-left: 2%;
+  word-break: break-all;
+}
+body main section#chat > div div#openChat > div#conteneur-content {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+body main section#chat > div div#openChat > div#conteneur-content input {
+  background: transparent;
+  border-radius: 50px;
+  border: solid 2px #40281F;
+  color: #40281F;
+  padding-left: 2%;
+  width: 75%;
+}
+body main section#chat > div div#openChat > div#conteneur-content input::placeholder {
+  color: #40281F;
+}
+body main section#chat > div div#openChat > div#conteneur-content button {
+  cursor: pointer;
+  width: 20%;
+  background: #40281F;
+  color: #F2B138;
+  font-size: 10px;
+  margin: 0;
+  padding: 1%;
+  border: solid 1px #40281F;
+  border-radius: 50px;
+}
 body main#information {
   background: #F2B138;
   padding-left: 10%;
@@ -1505,7 +2149,7 @@ body main#information a {
 body main#information a:hover {
   text-decoration: underline;
 }
-body > section#popUp {
+body > section#popUp, body > section#popUpResult {
   position: fixed;
   font-size: 18px;
   top: 0;
@@ -1517,18 +2161,18 @@ body > section#popUp {
   z-index: 0;
   transition: 0.5s;
 }
-body > section#popUp.showPopUp {
+body > section#popUp.showPopUp, body > section#popUpResult.showPopUp {
   z-index: 1001;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
   transition: 0.5s;
 }
-body > section#popUp.showPopUp div.showDiv {
+body > section#popUp.showPopUp div.showDiv, body > section#popUpResult.showPopUp div.showDiv {
   bottom: 0;
   opacity: 1;
   transition: 0.5s;
 }
-body > section#popUp > div {
+body > section#popUp > div, body > section#popUpResult > div {
   opacity: 0;
   position: absolute;
   top: 0;
@@ -1547,7 +2191,7 @@ body > section#popUp > div {
   border-radius: 40px;
   transition: 0.5s;
 }
-body > section#popUp > div h2 {
+body > section#popUp > div h2, body > section#popUpResult > div h2 {
   color: #F2B138;
   font-family: "Rye";
   font-size: 24px;
@@ -1556,14 +2200,14 @@ body > section#popUp > div h2 {
   text-align: center;
   width: 100%;
 }
-body > section#popUp > div > div:first-child {
+body > section#popUp > div > div:first-child, body > section#popUpResult > div > div:first-child {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   padding-bottom: 2%;
   padding-right: 2%;
 }
-body > section#popUp > div > div:first-child div {
+body > section#popUp > div > div:first-child div, body > section#popUpResult > div > div:first-child div {
   width: 20px;
   height: 20px;
   position: relative;
@@ -1573,26 +2217,26 @@ body > section#popUp > div > div:first-child div {
   transition: 0.5s;
   border-radius: 50%;
 }
-body > section#popUp > div > div:first-child div.hideDiv {
+body > section#popUp > div > div:first-child div.hideDiv, body > section#popUpResult > div > div:first-child div.hideDiv {
   transform: rotate(360deg);
   transition: 0.5s;
 }
-body > section#popUp > div > div:first-child div:hover {
+body > section#popUp > div > div:first-child div:hover, body > section#popUpResult > div > div:first-child div:hover {
   cursor: pointer;
   transform: rotate(90deg);
   transition: 0.5s;
 }
-body > section#popUp > div > div:first-child div span {
+body > section#popUp > div > div:first-child div span, body > section#popUpResult > div > div:first-child div span {
   position: absolute;
   width: 20px;
   height: 6px;
   background: #F2B138;
   border-radius: 50px;
 }
-body > section#popUp > div > div:first-child div span:last-child {
+body > section#popUp > div > div:first-child div span:last-child, body > section#popUpResult > div > div:first-child div span:last-child {
   transform: rotate(90deg);
 }
-body > section#popUp > div > div.anyPart {
+body > section#popUp > div > div.anyPart, body > section#popUpResult > div > div.anyPart {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1603,11 +2247,11 @@ body > section#popUp > div > div.anyPart {
   margin-top: 5%;
   margin-bottom: 2%;
 }
-body > section#popUp > div > div.anyPart svg {
+body > section#popUp > div > div.anyPart svg, body > section#popUpResult > div > div.anyPart svg {
   width: 20%;
   fill: #40281F;
 }
-body > section#popUp > div > div.anyPart p {
+body > section#popUp > div > div.anyPart p, body > section#popUpResult > div > div.anyPart p {
   padding-left: 5%;
   padding-right: 5%;
   text-align: left;
@@ -1615,15 +2259,26 @@ body > section#popUp > div > div.anyPart p {
   color: #40281F;
   width: 60%;
 }
-body > section#popUp > div form {
+body > section#popUp > div > div.result, body > section#popUpResult > div > div.result {
+  margin-top: 5%;
+}
+body > section#popUp > div > div.result div, body > section#popUpResult > div > div.result div {
+  display: flex;
+  justify-content: space-between;
+}
+body > section#popUp > div > div.result div span, body > section#popUpResult > div > div.result div span {
+  color: #F2B138;
+  margin-bottom: 3%;
+}
+body > section#popUp > div form, body > section#popUpResult > div form {
   text-align: center;
   display: flex;
   flex-direction: column;
 }
-body > section#popUp > div form.InfosProfil {
+body > section#popUp > div form.InfosProfil, body > section#popUpResult > div form.InfosProfil {
   flex-direction: column;
 }
-body > section#popUp > div form.InfosProfil > div {
+body > section#popUp > div form.InfosProfil > div, body > section#popUpResult > div form.InfosProfil > div {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1631,14 +2286,14 @@ body > section#popUp > div form.InfosProfil > div {
   padding-bottom: 5%;
   padding-top: 5%;
 }
-body > section#popUp > div form.InfosProfil > div > div:first-child {
+body > section#popUp > div form.InfosProfil > div > div:first-child, body > section#popUpResult > div form.InfosProfil > div > div:first-child {
   width: 40%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-body > section#popUp > div form.InfosProfil > div > div:first-child > div:first-child {
+body > section#popUp > div form.InfosProfil > div > div:first-child > div:first-child, body > section#popUpResult > div form.InfosProfil > div > div:first-child > div:first-child {
   width: 15vw;
   height: 15vw;
   background-color: #ffffff;
@@ -1650,11 +2305,11 @@ body > section#popUp > div form.InfosProfil > div > div:first-child > div:first-
   overflow: hidden;
   border: solid 2px #40281F;
 }
-body > section#popUp > div form.InfosProfil > div > div:first-child > div:first-child img {
+body > section#popUp > div form.InfosProfil > div > div:first-child > div:first-child img, body > section#popUpResult > div form.InfosProfil > div > div:first-child > div:first-child img {
   min-width: 100%;
   min-height: 100%;
 }
-body > section#popUp > div form.InfosProfil > div > div:first-child label {
+body > section#popUp > div form.InfosProfil > div > div:first-child label, body > section#popUpResult > div form.InfosProfil > div > div:first-child label {
   color: #40281F;
   background-color: #F2B138;
   font-family: "Rye";
@@ -1671,30 +2326,30 @@ body > section#popUp > div form.InfosProfil > div > div:first-child label {
   width: max-content;
   margin: auto;
 }
-body > section#popUp > div form.InfosProfil > div > div:first-child label:hover {
+body > section#popUp > div form.InfosProfil > div > div:first-child label:hover, body > section#popUpResult > div form.InfosProfil > div > div:first-child label:hover {
   color: #F2B138;
   background-color: #40281F;
   border: solid 2px #F2B138;
   transition: 0.5s;
 }
-body > section#popUp > div form.InfosProfil > div > div:first-child input {
+body > section#popUp > div form.InfosProfil > div > div:first-child input, body > section#popUpResult > div form.InfosProfil > div > div:first-child input {
   display: none;
 }
-body > section#popUp > div form.InfosProfil > div > div:nth-child(2) {
+body > section#popUp > div form.InfosProfil > div > div:nth-child(2), body > section#popUpResult > div form.InfosProfil > div > div:nth-child(2) {
   width: 60%;
 }
-body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div {
+body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div, body > section#popUpResult > div form.InfosProfil > div > div:nth-child(2) div {
   position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div label {
+body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div label, body > section#popUpResult > div form.InfosProfil > div > div:nth-child(2) div label {
   color: #F2B138;
   padding-right: 5%;
   white-space: nowrap;
 }
-body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div input {
+body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div input, body > section#popUpResult > div form.InfosProfil > div > div:nth-child(2) div input {
   width: 100%;
   color: #40281F;
   background-color: #F2B138;
@@ -1708,17 +2363,17 @@ body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div input {
   text-align: left;
   font-size: 18px;
 }
-body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div input::placeholder {
+body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div input::placeholder, body > section#popUpResult > div form.InfosProfil > div > div:nth-child(2) div input::placeholder {
   font-style: italic;
   color: #40281F;
 }
-body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div input#showModifMotDePasse {
+body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div input#showModifMotDePasse, body > section#popUpResult > div form.InfosProfil > div > div:nth-child(2) div input#showModifMotDePasse {
   cursor: not-allowed;
 }
-body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div input[type=number]::-webkit-inner-spin-button {
+body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div input[type=number]::-webkit-inner-spin-button, body > section#popUpResult > div form.InfosProfil > div > div:nth-child(2) div input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div > span {
+body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div > span, body > section#popUpResult > div form.InfosProfil > div > div:nth-child(2) div > span {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1731,7 +2386,7 @@ body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div > span 
   border-radius: 50px;
   cursor: pointer;
 }
-body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div > span.text:before {
+body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div > span.text:before, body > section#popUpResult > div form.InfosProfil > div > div:nth-child(2) div > span.text:before {
   content: "";
   width: 10px;
   height: 10px;
@@ -1744,28 +2399,28 @@ body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div > span.
   right: 0;
   margin: auto;
 }
-body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div p {
+body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div p, body > section#popUpResult > div form.InfosProfil > div > div:nth-child(2) div p {
   width: 100%;
   color: #F2B138;
   margin: 0;
   padding-top: 3%;
   padding-bottom: 3%;
 }
-body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div p span {
+body > section#popUp > div form.InfosProfil > div > div:nth-child(2) div p span, body > section#popUpResult > div form.InfosProfil > div > div:nth-child(2) div p span {
   padding-right: 5%;
 }
-body > section#popUp > div form > div#contentSuggestionSearch {
+body > section#popUp > div form > div#contentSuggestionSearch, body > section#popUpResult > div form > div#contentSuggestionSearch {
   width: 90%;
   position: relative;
   margin: auto;
   text-align: left;
 }
-body > section#popUp > div form > div#contentSuggestionSearch label {
+body > section#popUp > div form > div#contentSuggestionSearch label, body > section#popUpResult > div form > div#contentSuggestionSearch label {
   color: #F2B138;
   margin-top: 5%;
   padding-left: 5%;
 }
-body > section#popUp > div form > div#contentSuggestionSearch input {
+body > section#popUp > div form > div#contentSuggestionSearch input, body > section#popUpResult > div form > div#contentSuggestionSearch input {
   width: 100%;
   color: #40281F;
   font-size: 18px;
@@ -1774,7 +2429,7 @@ body > section#popUp > div form > div#contentSuggestionSearch input {
   padding-left: 5%;
   padding-right: 5%;
 }
-body > section#popUp > div form > div#contentSuggestionSearch #suggestions {
+body > section#popUp > div form > div#contentSuggestionSearch #suggestions, body > section#popUpResult > div form > div#contentSuggestionSearch #suggestions {
   position: absolute;
   top: 100%;
   left: 0;
@@ -1786,13 +2441,13 @@ body > section#popUp > div form > div#contentSuggestionSearch #suggestions {
   overflow-y: auto;
   overflow-x: hidden;
 }
-body > section#popUp > div form > div#contentSuggestionSearch #suggestions div {
+body > section#popUp > div form > div#contentSuggestionSearch #suggestions div, body > section#popUpResult > div form > div#contentSuggestionSearch #suggestions div {
   width: 100%;
 }
-body > section#popUp > div form > div#contentSuggestionSearch #suggestions div input {
+body > section#popUp > div form > div#contentSuggestionSearch #suggestions div input, body > section#popUpResult > div form > div#contentSuggestionSearch #suggestions div input {
   display: none;
 }
-body > section#popUp > div form > div#contentSuggestionSearch #suggestions div label {
+body > section#popUp > div form > div#contentSuggestionSearch #suggestions div label, body > section#popUpResult > div form > div#contentSuggestionSearch #suggestions div label {
   width: 100%;
   padding-top: 1%;
   padding-bottom: 1%;
@@ -1803,69 +2458,79 @@ body > section#popUp > div form > div#contentSuggestionSearch #suggestions div l
   display: flex;
   margin: 0;
 }
-body > section#popUp > div form > div#contentSuggestionSearch #suggestions div label:hover {
+body > section#popUp > div form > div#contentSuggestionSearch #suggestions div label:hover, body > section#popUpResult > div form > div#contentSuggestionSearch #suggestions div label:hover {
   background-color: #40281F;
   color: #F2B138;
   transition: 0.5s;
   cursor: pointer;
 }
-body > section#popUp > div form > div#contentSuggestionSearch #suggestions div input[type=radio]:checked + label {
+body > section#popUp > div form > div#contentSuggestionSearch #suggestions div input[type=radio]:checked + label, body > section#popUpResult > div form > div#contentSuggestionSearch #suggestions div input[type=radio]:checked + label {
   background-color: #40281F;
   color: #F2B138;
 }
 body > section#popUp > div form div.table3,
-body > section#popUp > div form div.table4 {
+body > section#popUp > div form div.table4, body > section#popUpResult > div form div.table3,
+body > section#popUpResult > div form div.table4 {
   padding-top: 5%;
   padding-bottom: 5%;
   width: 100%;
 }
 body > section#popUp > div form div.table3 div.thead,
-body > section#popUp > div form div.table4 div.thead {
+body > section#popUp > div form div.table4 div.thead, body > section#popUpResult > div form div.table3 div.thead,
+body > section#popUpResult > div form div.table4 div.thead {
   width: 100%;
 }
 body > section#popUp > div form div.table3 div.thead div.tr,
-body > section#popUp > div form div.table4 div.thead div.tr {
+body > section#popUp > div form div.table4 div.thead div.tr, body > section#popUpResult > div form div.table3 div.thead div.tr,
+body > section#popUpResult > div form div.table4 div.thead div.tr {
   width: 100%;
   background-color: #40281F;
   color: #F2B138;
   display: flex;
 }
 body > section#popUp > div form div.table3 div.thead div.tr p,
-body > section#popUp > div form div.table4 div.thead div.tr p {
+body > section#popUp > div form div.table4 div.thead div.tr p, body > section#popUpResult > div form div.table3 div.thead div.tr p,
+body > section#popUpResult > div form div.table4 div.thead div.tr p {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 body > section#popUp > div form div.table3 div.thead div.tr p:first-of-type,
-body > section#popUp > div form div.table4 div.thead div.tr p:first-of-type {
+body > section#popUp > div form div.table4 div.thead div.tr p:first-of-type, body > section#popUpResult > div form div.table3 div.thead div.tr p:first-of-type,
+body > section#popUpResult > div form div.table4 div.thead div.tr p:first-of-type {
   width: 10%;
   max-width: 10%;
   min-width: 10%;
 }
 body > section#popUp > div form div.table3 div.thead div.tr p:not(:first-of-type),
-body > section#popUp > div form div.table4 div.thead div.tr p:not(:first-of-type) {
+body > section#popUp > div form div.table4 div.thead div.tr p:not(:first-of-type), body > section#popUpResult > div form div.table3 div.thead div.tr p:not(:first-of-type),
+body > section#popUpResult > div form div.table4 div.thead div.tr p:not(:first-of-type) {
   width: 30%;
   max-width: 30%;
   min-width: 30%;
 }
 body > section#popUp > div form div.table3 div.tbody,
-body > section#popUp > div form div.table4 div.tbody {
+body > section#popUp > div form div.table4 div.tbody, body > section#popUpResult > div form div.table3 div.tbody,
+body > section#popUpResult > div form div.table4 div.tbody {
   width: 100%;
   max-height: 30vh;
   overflow-y: auto;
   overflow-x: hidden;
 }
 body > section#popUp > div form div.table3 div.tbody div.tr,
-body > section#popUp > div form div.table4 div.tbody div.tr {
+body > section#popUp > div form div.table4 div.tbody div.tr, body > section#popUpResult > div form div.table3 div.tbody div.tr,
+body > section#popUpResult > div form div.table4 div.tbody div.tr {
   width: 100%;
 }
 body > section#popUp > div form div.table3 div.tbody div.tr input[type=radio],
-body > section#popUp > div form div.table4 div.tbody div.tr input[type=radio] {
+body > section#popUp > div form div.table4 div.tbody div.tr input[type=radio], body > section#popUpResult > div form div.table3 div.tbody div.tr input[type=radio],
+body > section#popUpResult > div form div.table4 div.tbody div.tr input[type=radio] {
   display: none;
 }
 body > section#popUp > div form div.table3 div.tbody div.tr label,
-body > section#popUp > div form div.table4 div.tbody div.tr label {
+body > section#popUp > div form div.table4 div.tbody div.tr label, body > section#popUpResult > div form div.table3 div.tbody div.tr label,
+body > section#popUpResult > div form div.table4 div.tbody div.tr label {
   width: 100%;
   padding-top: 1%;
   padding-bottom: 1%;
@@ -1875,30 +2540,35 @@ body > section#popUp > div form div.table4 div.tbody div.tr label {
   display: flex;
 }
 body > section#popUp > div form div.table3 div.tbody div.tr label:hover,
-body > section#popUp > div form div.table4 div.tbody div.tr label:hover {
+body > section#popUp > div form div.table4 div.tbody div.tr label:hover, body > section#popUpResult > div form div.table3 div.tbody div.tr label:hover,
+body > section#popUpResult > div form div.table4 div.tbody div.tr label:hover {
   background-color: #40281F;
   color: #F2B138;
   transition: 0.5s;
   cursor: pointer;
 }
 body > section#popUp > div form div.table3 div.tbody div.tr input[type=radio]:checked + label,
-body > section#popUp > div form div.table4 div.tbody div.tr input[type=radio]:checked + label {
+body > section#popUp > div form div.table4 div.tbody div.tr input[type=radio]:checked + label, body > section#popUpResult > div form div.table3 div.tbody div.tr input[type=radio]:checked + label,
+body > section#popUpResult > div form div.table4 div.tbody div.tr input[type=radio]:checked + label {
   background-color: #40281F;
   color: #F2B138;
 }
 body > section#popUp > div form div.table3 div.tbody div.tr p,
-body > section#popUp > div form div.table4 div.tbody div.tr p {
+body > section#popUp > div form div.table4 div.tbody div.tr p, body > section#popUpResult > div form div.table3 div.tbody div.tr p,
+body > section#popUpResult > div form div.table4 div.tbody div.tr p {
   margin: 0;
 }
 body > section#popUp > div form div.table3 div.tbody div.tr p:first-of-type,
-body > section#popUp > div form div.table4 div.tbody div.tr p:first-of-type {
+body > section#popUp > div form div.table4 div.tbody div.tr p:first-of-type, body > section#popUpResult > div form div.table3 div.tbody div.tr p:first-of-type,
+body > section#popUpResult > div form div.table4 div.tbody div.tr p:first-of-type {
   text-align: center;
   width: 10%;
   max-width: 10%;
   min-width: 10%;
 }
 body > section#popUp > div form div.table3 div.tbody div.tr p:not(:first-of-type),
-body > section#popUp > div form div.table4 div.tbody div.tr p:not(:first-of-type) {
+body > section#popUp > div form div.table4 div.tbody div.tr p:not(:first-of-type), body > section#popUpResult > div form div.table3 div.tbody div.tr p:not(:first-of-type),
+body > section#popUpResult > div form div.table4 div.tbody div.tr p:not(:first-of-type) {
   text-align: center;
   width: 30%;
   white-space: nowrap;
@@ -1906,7 +2576,8 @@ body > section#popUp > div form div.table4 div.tbody div.tr p:not(:first-of-type
   overflow-y: hidden;
 }
 body > section#popUp > div form div.table4 div.thead div.tr p:first-of-type,
-body > section#popUp > div form div.table4 div.tbody div.tr p:first-of-type {
+body > section#popUp > div form div.table4 div.tbody div.tr p:first-of-type, body > section#popUpResult > div form div.table4 div.thead div.tr p:first-of-type,
+body > section#popUpResult > div form div.table4 div.tbody div.tr p:first-of-type {
   width: 10%;
   max-width: 10%;
   min-width: 10%;
@@ -1914,7 +2585,10 @@ body > section#popUp > div form div.table4 div.tbody div.tr p:first-of-type {
 body > section#popUp > div form div.table4 div.thead div.tr p:nth-child(2),
 body > section#popUp > div form div.table4 div.thead div.tr p:nth-child(3),
 body > section#popUp > div form div.table4 div.tbody div.tr p:nth-child(2),
-body > section#popUp > div form div.table4 div.tbody div.tr p:nth-child(3) {
+body > section#popUp > div form div.table4 div.tbody div.tr p:nth-child(3), body > section#popUpResult > div form div.table4 div.thead div.tr p:nth-child(2),
+body > section#popUpResult > div form div.table4 div.thead div.tr p:nth-child(3),
+body > section#popUpResult > div form div.table4 div.tbody div.tr p:nth-child(2),
+body > section#popUpResult > div form div.table4 div.tbody div.tr p:nth-child(3) {
   width: 25%;
   max-width: 25%;
   min-width: 25%;
@@ -1922,16 +2596,19 @@ body > section#popUp > div form div.table4 div.tbody div.tr p:nth-child(3) {
 body > section#popUp > div form div.table4 div.thead div.tr p:nth-child(4),
 body > section#popUp > div form div.table4 div.thead div.tr p:nth-child(5),
 body > section#popUp > div form div.table4 div.tbody div.tr p:nth-child(4),
-body > section#popUp > div form div.table4 div.tbody div.tr p:nth-child(5) {
+body > section#popUp > div form div.table4 div.tbody div.tr p:nth-child(5), body > section#popUpResult > div form div.table4 div.thead div.tr p:nth-child(4),
+body > section#popUpResult > div form div.table4 div.thead div.tr p:nth-child(5),
+body > section#popUpResult > div form div.table4 div.tbody div.tr p:nth-child(4),
+body > section#popUpResult > div form div.table4 div.tbody div.tr p:nth-child(5) {
   width: 20%;
   max-width: 20%;
   min-width: 20%;
 }
-body > section#popUp > div form > label {
+body > section#popUp > div form > label, body > section#popUpResult > div form > label {
   color: #F2B138;
   margin-top: 5%;
 }
-body > section#popUp > div form input[type=text] {
+body > section#popUp > div form input[type=text], body > section#popUpResult > div form input[type=text] {
   color: #40281F;
   background-color: #F2B138;
   border-radius: 50px;
@@ -1943,11 +2620,11 @@ body > section#popUp > div form input[type=text] {
   text-align: center;
   font-size: 18px;
 }
-body > section#popUp > div form input[type=text]::placeholder {
+body > section#popUp > div form input[type=text]::placeholder, body > section#popUpResult > div form input[type=text]::placeholder {
   font-style: italic;
   color: #40281F;
 }
-body > section#popUp > div form input[type=submit] {
+body > section#popUp > div form input[type=submit], body > section#popUpResult > div form input[type=submit] {
   color: #40281F;
   background-color: #F2B138;
   font-family: "Rye";
@@ -1964,23 +2641,23 @@ body > section#popUp > div form input[type=submit] {
   width: max-content;
   margin: auto;
 }
-body > section#popUp > div form input[type=submit]:hover {
+body > section#popUp > div form input[type=submit]:hover, body > section#popUpResult > div form input[type=submit]:hover {
   color: #F2B138;
   background-color: #40281F;
   border: solid 2px #F2B138;
   transition: 0.5s;
 }
-body > section#popUp > div > div:last-child:not(.anyPart) {
+body > section#popUp > div > div:last-child:not(.anyPart), body > section#popUpResult > div > div:last-child:not(.anyPart) {
   width: 100%;
   padding-top: 5%;
   display: flex;
   justify-content: space-around;
 }
-body > section#popUp > div > div:last-child:not(.anyPart) a {
+body > section#popUp > div > div:last-child:not(.anyPart) a, body > section#popUpResult > div > div:last-child:not(.anyPart) a {
   text-decoration: none;
   font-family: "Oswald" !important;
 }
-body > section#popUp > div > div:last-child:not(.anyPart) a:first-child {
+body > section#popUp > div > div:last-child:not(.anyPart) a:first-child, body > section#popUpResult > div > div:last-child:not(.anyPart) a:first-child {
   color: #40281F;
   background-color: #F2B138;
   font-family: "Rye";
@@ -1993,13 +2670,13 @@ body > section#popUp > div > div:last-child:not(.anyPart) a:first-child {
   padding-right: 5%;
   transition: 0.5s;
 }
-body > section#popUp > div > div:last-child:not(.anyPart) a:first-child:hover {
+body > section#popUp > div > div:last-child:not(.anyPart) a:first-child:hover, body > section#popUpResult > div > div:last-child:not(.anyPart) a:first-child:hover {
   color: #F2B138;
   background-color: #40281F;
   border: solid 2px #F2B138;
   transition: 0.5s;
 }
-body > section#popUp > div > div:last-child:not(.anyPart) a:nth-child(2) {
+body > section#popUp > div > div:last-child:not(.anyPart) a:nth-child(2), body > section#popUpResult > div > div:last-child:not(.anyPart) a:nth-child(2) {
   color: #F2B138;
   background-color: #40281F;
   font-family: "Rye";
@@ -2012,11 +2689,182 @@ body > section#popUp > div > div:last-child:not(.anyPart) a:nth-child(2) {
   padding-right: 5%;
   transition: 0.5s;
 }
-body > section#popUp > div > div:last-child:not(.anyPart) a:nth-child(2):hover {
+body > section#popUp > div > div:last-child:not(.anyPart) a:nth-child(2):hover, body > section#popUpResult > div > div:last-child:not(.anyPart) a:nth-child(2):hover {
   color: #40281F;
   background-color: #F2B138;
   border: solid 2px #F2B138;
   transition: 0.5s;
+}
+body > section#popUp.plateau > div, body > section#popUpResult.plateau > div {
+  width: 100% !important;
+  height: 100vh;
+  max-height: none;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body > section#popUp.plateau > div h2, body > section#popUpResult.plateau > div h2 {
+  color: #40281F;
+  font-size: 2.9vw;
+}
+body > section#popUp.plateau > div form, body > section#popUpResult.plateau > div form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+}
+body > section#popUp.plateau > div form input[type=radio], body > section#popUpResult.plateau > div form input[type=radio] {
+  display: none;
+}
+body > section#popUp.plateau > div form label, body > section#popUpResult.plateau > div form label {
+  width: 10%;
+  cursor: pointer;
+}
+body > section#popUp.plateau > div form label img, body > section#popUpResult.plateau > div form label img {
+  width: 100%;
+  filter: grayscale(1);
+  transition: 0.5s;
+  border-radius: 10px;
+}
+body > section#popUp.plateau > div form input[type=radio]:checked + label img, body > section#popUpResult.plateau > div form input[type=radio]:checked + label img {
+  filter: grayscale(0);
+  transition: 0.5s;
+}
+body > section#popUp.plateau > div form div, body > section#popUpResult.plateau > div form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+}
+body > section#popUp.plateau > div form div input, body > section#popUpResult.plateau > div form div input {
+  font-family: "Rye";
+}
+body > section#popUp.plateau > div form div a, body > section#popUpResult.plateau > div form div a {
+  color: #40281F;
+  background-color: transparent;
+  font-family: "Rye";
+  font-size: 1.5vw;
+  border: solid 2px #40281F;
+  border-radius: 50px;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
+  transition: 0.5s;
+  margin-top: 2%;
+  text-decoration: none;
+}
+body > section#popUp.plateau > div form div a:hover, body > section#popUpResult.plateau > div form div a:hover {
+  color: #F2B138;
+  background-color: #40281F;
+  border: solid 2px #40281F;
+  transition: 0.5s;
+}
+body > section#popUp.plateau > div#contentParameter, body > section#popUpResult.plateau > div#contentParameter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body > section#popUp.plateau > div#contentParameter a, body > section#popUpResult.plateau > div#contentParameter a {
+  width: 25%;
+  text-decoration: none;
+  color: #40281F;
+  background: #F2B138;
+  font-family: "Rye";
+  font-size: 2.9vw;
+  border: solid 2px #F2B138;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 50px;
+  padding: 0.5%;
+  margin-top: 2%;
+  overflow: hidden;
+}
+body > section#popUp.plateau > div#contentParameter a img, body > section#popUpResult.plateau > div#contentParameter a img {
+  width: 7vh;
+  height: 7vh;
+  background: #40281F;
+  border-radius: 50px;
+}
+body > section#popUp.plateau > div#contentParameter a span, body > section#popUpResult.plateau > div#contentParameter a span {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+body > section#parameter {
+  position: absolute;
+  width: 10%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  z-index: 5000;
+}
+body > section#parameter > div {
+  position: absolute;
+  right: 0;
+  background: #40281F;
+  height: 10vh;
+  width: 100%;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+}
+body > section#parameter > div:first-child {
+  top: 3%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+body > section#parameter > div:first-child a {
+  min-width: 8vh;
+  max-width: 8vh;
+  height: 8vh;
+  overflow: hidden;
+  margin-left: 10px;
+  border-radius: 50px;
+}
+body > section#parameter > div:first-child a:hover {
+  transform: rotate(60deg);
+  transition: 0.5s;
+}
+body > section#parameter > div:first-child a img {
+  width: 100%;
+}
+body > section#parameter > div:last-child {
+  bottom: 3%;
+  display: flex;
+  align-items: center;
+}
+body > section#parameter > div:last-child > div:first-child {
+  min-width: 8vh;
+  max-width: 8vh;
+  height: 8vh;
+  overflow: hidden;
+  margin-left: 10px;
+  border: solid 1px #F2B138;
+  border-radius: 50px;
+}
+body > section#parameter > div:last-child > div:last-child {
+  width: 100%;
+  color: #F2B138;
+  font-family: "Rye";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2%;
+}
+body > section#parameter > div:last-child > div:last-child p {
+  margin: 0;
+  font-size: 1.3vw;
+}
+body > section#parameter > div:last-child > div:last-child h3 {
+  margin: 0;
+  font-weight: 100;
+  font-size: 1.5vw;
 }
 body footer {
   background-color: #40281F;

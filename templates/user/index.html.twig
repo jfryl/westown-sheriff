@@ -62,7 +62,7 @@
                             <span>19ans</span> <!-- age du joueur -->
                         </div>
                         <div>
-                            <p>Inscrit(e) depuis le <span>{{ user.createdAt|date("j F Y ",false) }}
+                            <p>Inscrit(e) depuis le <span>{{ user.createdAt|format_date('long') }}
                                     <!-- date d'inscription -->
                                 </span></p>
                             <p>
@@ -294,7 +294,7 @@
                             <input type="number" min="0" max="150" placeholder="Votre âge" name="age" id="valueModifAge">
                         </div>
                         <div>
-                            <p><span>Email :</span> Mail utilisateur</p>
+                            <p><span>Email :</span> {{ user.email }}</p>
                         </div>
                     </div>
                 </div>

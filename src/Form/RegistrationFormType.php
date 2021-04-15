@@ -3,10 +3,10 @@
 namespace App\Form;
 
 use App\Entity\User;
-use Doctrine\DBAL\Types\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -21,9 +21,19 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('email', EmailType::class)
-            ->add('firstname')
-            ->add('lastname')
-            ->add('birthday', BirthdayType::class)
+            ->add('firstname', TextType::class,[
+                'required'=>$options['required']
+            ])
+            ->add('lastname', TextType::class,[
+                'required'=>$options['required']
+            ])
+            ->add('pseudo', TextType::class,[
+                'required'=>$options['required']
+            ])
+            ->add('birthday', BirthdayType::class,[
+                'widget' => 'single_text',
+                'required'=>$options['required']
+            ])
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => [
@@ -48,6 +58,22 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
+            /*->add('confirmPassword', PasswordType::class, [
+                // instead of being set onto the object directly,
+                // this is read and encoded in the controller
+                'mapped' => false,
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Please enter a password',
+                    ]),
+                    new Length([
+                        'min' => 6,
+                        'minMessage' => 'Your password should be at least {{ limit }} characters',
+                        // max length allowed by Symfony for security reasons
+                        'max' => 4096,
+                    ]),
+                ],
+            ])*/
         ;
     }
 

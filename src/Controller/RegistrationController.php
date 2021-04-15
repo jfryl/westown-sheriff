@@ -47,6 +47,11 @@ class RegistrationController extends AbstractController
             $user->setLastName (
                 $form->get('lastname')->getData ()
             );
+            $user->setPseudo(
+                $form->get('pseudo')->getData ()
+            );
+            $user->setCreatedAt(new \DateTime('now'));
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();

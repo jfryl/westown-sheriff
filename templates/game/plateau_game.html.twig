@@ -16,16 +16,16 @@
                 </div>
                 <div>
                     <div>
-                            <img src="{{ asset('assets/img/plateau/jetons/jeton_depot_anim.png') }}" alt="Jeton de dépôts">
+                            <img src="{{ asset('assets/img/plateau/jetons/jeton_depot_anim.png') }}" alt="Jeton de dépôt adversaire">
                     </div>
                     <div>
-                            <img src="{{ asset('assets/img/plateau/jetons/jeton_echange_anim.png') }}" alt="Jeton d'échange">
+                            <img src="{{ asset('assets/img/plateau/jetons/jeton_echange_anim.png') }}" alt="Jeton d'échange adversaire">
                     </div>
                     <div>
-                            <img src="{{ asset('assets/img/plateau/jetons/jeton_offre_anim.png') }}" alt="Jeton d'offre">
+                            <img src="{{ asset('assets/img/plateau/jetons/jeton_offre_anim.png') }}" alt="Jeton d'offre adversaire">
                     </div>
                     <div>
-                            <img src="{{ asset('assets/img/plateau/jetons/jeton_secret_anim.png') }}" alt="Jeton de secret">
+                            <img src="{{ asset('assets/img/plateau/jetons/jeton_secret_anim.png') }}" alt="Jeton de secret adversaire">
                     </div>
                 </div>
             </div>
@@ -115,6 +115,9 @@
         </div>
     </section>
 </main>
+
+{% set numero={1:'premier', 2:'second', 3:'troisieme', 4:'quatrieme', 5:'cinquieme', 6:'sixieme', 7:'septieme'} %}
+
 <section id="popUp" class="plateau">
     <div id="contentParameter">
         <h2>MENU</h2>
@@ -123,14 +126,15 @@
             <span>Abandonner</span>
         </a>
     </div>
+
     <div id="contentDepot">
         <h2>Action dépot</h2>
         <form action="" method="POST">
 
             {% for card in moi.handCards %}
-                <input type="radio" name="choixSecret" id="premierChoixSecret">
-                <label for="ChoixSecret">
-                    <img src="{{ asset('assets/cartes/objets/'~cards[card].picture) }}" alt="ChoixSecret">
+                <input type="radio" name="choixDepot" id="{{ numero[loop.index] }}ChoixDepot">
+                <label for="{{ numero[loop.index] }}ChoixDepot">
+                    <img src="{{ asset('assets/cartes/objets/'~cards[card].picture) }}" alt="{{ numero[loop.index] }}ChoixDepot">
                 </label>
             {% endfor %}
             <div>
@@ -142,12 +146,11 @@
     <div id="contentEchange">
         <h2>Action échange</h2>
         <form action="" method="POST">
-
-            {% for card in moi.handCards %}
-                <input type="radio" name="choixSecret" id="premierChoixSecret">
-                <label for="premierChoixSecret">
-                    <img src="{{ asset('assets/cartes/objets/'~cards[card].picture) }}" alt="premierChoixSecret">
-                </label>
+            {% for card in moi.handCards%}
+                    <input type="radio" name="choixEchange" id="{{ numero[loop.index] }}ChoixEchange">
+                    <label for="{{ numero[loop.index] }}ChoixEchange">
+                        <img src="{{ asset('assets/cartes/objets/'~cards[card].picture) }}" alt="{{ numero[loop.index] }}ChoixEchange">
+                    </label>
             {% endfor %}
 
             <div>
@@ -160,9 +163,9 @@
         <h2>Action offre</h2>
         <form action="" method="POST">
             {% for card in moi.handCards %}
-                <input type="radio" name="choixSecret" id="premierChoixSecret">
-                <label for="premierChoixSecret">
-                    <img src="{{ asset('assets/cartes/objets/'~cards[card].picture) }}" alt="">
+                <input type="radio" name="choixOffre" id="{{ numero[loop.index] }}ChoixOffre">
+                <label for="{{ numero[loop.index] }}ChoixOffre">
+                    <img src="{{ asset('assets/cartes/objets/'~cards[card].picture) }}" alt="{{ numero[loop.index] }}ChoixOffre">
                 </label>
             {% endfor %}
             <div>
@@ -175,9 +178,9 @@
         <h2>Action secret</h2>
         <form action="" method="POST">
             {% for card in moi.handCards%}
-                <input type="radio" name="choixSecret" id="premierChoixSecret">
-                <label for="premierChoixSecret">
-                <img src="{{ asset('assets/cartes/objets/'~cards[card].picture) }}" alt="">
+                <input type="radio" name="choixSecret" id="{{ numero[loop.index] }}ChoixSecret">
+                <label for="{{ numero[loop.index] }}ChoixSecret">
+                <img src="{{ asset('assets/cartes/objets/'~cards[card].picture) }}" alt="{{ numero[loop.index] }}ChoixSecret">
                 </label>
             {% endfor %}
             <div>

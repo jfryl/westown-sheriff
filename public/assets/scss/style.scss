@@ -85,8 +85,9 @@ body {
                                     transition: .5s;
 
                                 }
-                                a.link-nav{
-                                    &:after{
+
+                                a.link-nav {
+                                    &:after {
                                         content: '';
                                         background: $white;
                                     }
@@ -169,8 +170,9 @@ body {
                             position: relative;
 
                         }
-                        a.link-nav{
-                            &:after{
+
+                        a.link-nav {
+                            &:after {
                                 position: absolute;
                                 content: '';
                                 width: 0%;
@@ -182,8 +184,8 @@ body {
                                 transition: 0.3s ease-in-out;
                             }
 
-                            &:hover{
-                                &:after{
+                            &:hover {
+                                &:after {
                                     width: 100%;
                                 }
                             }
@@ -280,6 +282,7 @@ body {
                     }
                 }
             }
+
             #submit-connexion {
                 input[type=submit] {
                     @include inputSubmit();
@@ -293,47 +296,50 @@ body {
                 }
             }
         }
-        #connexion-link-cont{
+
+        #connexion-link-cont {
             width: 100%;
 
-                .connexion-link{
-                    @include link-form();
-                    display: contents;
-                }
+            .connexion-link {
+                @include link-form();
+                display: contents;
+            }
 
-            @media only screen and(max-width: 800px){
-                .connexion-link-p{
-                    .connexion-link{
+            @media only screen and(max-width: 800px) {
+                .connexion-link-p {
+                    .connexion-link {
                         font-size: 12px;
                     }
                 }
             }
         }
 
-        #retour-link-cont{
+        #retour-link-cont {
             width: 100%;
-                .retour-link-p{
-                    text-align: center;
-                }
-                .retour-link{
-                    margin-top: 2%;
-                    margin-bottom: 2%;
-                    color: $brown;
-                    text-decoration: none;
-                    margin: 4% 0%;
-                    position: relative;
-                    transition: 0.2s ease-in-out;
-                    font-size: 20px !important;
-                    text-align: center;
 
-                    &:hover{
-                        color: #fff;
-                    }
-                }
+            .retour-link-p {
+                text-align: center;
+            }
 
-            @media only screen and(max-width: 800px){
-                .retour-link-p{
-                    .retour-link{
+            .retour-link {
+                margin-top: 2%;
+                margin-bottom: 2%;
+                color: $brown;
+                text-decoration: none;
+                margin: 4% 0%;
+                position: relative;
+                transition: 0.2s ease-in-out;
+                font-size: 20px !important;
+                text-align: center;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+
+            @media only screen and(max-width: 800px) {
+                .retour-link-p {
+                    .retour-link {
                         font-size: 12px;
                     }
                 }
@@ -555,9 +561,11 @@ body {
         background-color: $yellow;
         position: relative;
         z-index: 4;
-        &#index{
+
+        &#index {
             padding: 0;
-            section{
+
+            section {
                 padding-top: 0;
                 padding-bottom: 0;
             }
@@ -566,6 +574,295 @@ body {
         section {
             padding-top: 3%;
             padding-bottom: 5%;
+
+            // plateau 
+            >div#plateau {
+                width: 100%;
+                height: 100vh;
+                margin: auto;
+                background: url('../img/plateau/fond_plateau.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+
+                >div {
+                    width: 100%;
+                    height: 33%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    position: relative;
+
+                    >div:not(.conteneurCarte) {
+                        width: 30%;
+                        height: 100%;
+
+                        // première colonne  du tableau
+                        &:first-child {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            padding-top: 3%;
+                            padding-left: 5%;
+
+                            div {
+                                width: 50%;
+                                height: min-content;
+                                border: dashed 2px $brown;
+                                border-radius: 5px;
+                                display: flex;
+                                flex-direction: column;
+
+                                img {
+                                    width: 100%;
+                                }
+
+                                h3 {
+                                    margin: 0;
+                                    font-family: $title-font;
+                                    font-size: $text;
+                                    font-weight: 10;
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        // seconde colonne  du tableau
+                        &:nth-child(2) {
+                            width: 40%;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            transform: rotate(5deg);
+
+                            img {
+                                width: 15%;
+                                position: absolute;
+                                border-radius: 5px;
+                                box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.5);
+
+                                @for $i from 1 to 8 {
+                                    &:nth-child(#{$i}){
+                                        animation: secondAnimationCarte#{$i} 1s forwards;
+                                    }
+
+                                    @keyframes secondAnimationCarte#{$i}{
+                                        from{
+                                            left: 10%;
+                                            top: 42%;
+                                            transform: rotate(-34deg);
+                                        }
+                                        to{
+                                            left: #{$i * 10%};
+                                            @if $i == 1 {
+                                                top: 42%;
+                                                transform: rotate(-34deg);
+                                            } @else if $i == 2 {
+                                                top: 31%;
+                                                transform: rotate(-22deg);
+                                            } @else if $i == 3 {
+                                                top: 25%;
+                                                transform: rotate(-10deg);
+                                            } @else if $i == 4 {
+                                                top: 23%;
+                                            } @else if $i == 5 {
+                                                top: 25%;
+                                                transform: rotate(10deg);
+                                            } @else if $i == 6 {
+                                                top: 33%;
+                                                transform: rotate(22deg);
+                                            } @else if $i == 7 {
+                                                top: 44%;
+                                                transform: rotate(34deg);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        // troisième colonne  du tableau
+                        &:nth-child(3) {
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            div {
+                                width: 40%;
+                                height: 50%;
+                                display: flex;
+                                padding-bottom: 5%;
+
+                                &:first-child {
+                                    padding-right: 7%;
+                                    justify-content: flex-end;
+                                    align-items: flex-end;
+
+                                }
+
+                                &:nth-child(2) {
+                                    justify-content: flex-start;
+                                    align-items: flex-end;
+                                }
+
+                                &:nth-child(3) {
+                                    padding-right: 7%;
+                                    justify-content: flex-end;
+                                    align-items: flex-start;
+                                }
+
+                                &:last-child {
+                                    justify-content: flex-start;
+                                    align-items: flex-start;
+                                }
+
+                                img {
+                                    height: 50%;
+                                    transform: rotate(-90deg);
+                                    border-radius: 5px;
+                                    box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.75);
+                                }
+                            }
+                        }
+                    }
+
+                    >div.conteneurCarte {
+                        width: 10%;
+                        height: 100%;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        position: absolute;
+                        
+                        @for $i from 1 to 8 {   
+                            &:nth-child(#{$i}){
+                                animation: firstCarte#{$i} 5s forwards;
+                            }
+
+                            &:nth-child(#{$i}){
+                                @keyframes firstCarte#{$i} {
+                                    0% {
+                                        position: absolute;
+                                        left: -100%;
+                                    }
+                                    10%{
+                                        left: -100%;
+                                    }
+    
+                                    40% {
+                                        position: absolute;
+                                        left: #{$i * 3.75% + $i*10% - 10%};
+                                    }
+    
+                                    99% {
+                                        position: absolute;
+                                        left: #{$i * 3.75% + $i*10% - 10%};
+                                    }
+    
+                                    100% {
+                                        position: relative;
+                                    }
+                                }
+                            }
+                        }
+
+                        >img {
+                            width: 100%;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    // première ligne du tableau
+                    &:first-child {
+                        >div {
+                            &:nth-child(2) {
+                                transform: rotate(185deg);
+                                right: 5%;
+                                img {
+                                    @for $i from 1 to 8 {
+                                        &:nth-child(#{$i}){
+                                            animation: secondAnimationCarte#{$i} 1s forwards;
+                                        }
+    
+                                        @keyframes secondAnimationCarte#{$i}{
+                                            from{
+                                                left: 9%;
+                                                top: 31%;
+                                                transform: rotate(-34deg);
+                                            }
+                                            to{
+                                                left: #{$i * 9%};
+                                                @if $i == 1 {
+                                                    top: #{$i *31%};
+                                                    transform: rotate(-34deg);
+                                                } @else if $i == 2 {
+                                                    top: #{$i * 10%};
+                                                    transform: rotate(-22deg);
+                                                } @else if $i == 3 {
+                                                    top: #{$i + 11%};
+                                                    transform: rotate(-10deg);
+                                                } @else if $i == 4 {
+                                                    top: #{$i + 8%};
+                                                } @else if $i == 5 {
+                                                    top: #{$i + 9%};
+                                                    transform: rotate(10deg);
+                                                } @else if $i == 6 {
+                                                    top: #{$i + 14%};
+                                                    transform: rotate(22deg);
+                                                } @else if $i == 7 {
+                                                    top: #{$i + 26%};
+                                                    transform: rotate(34deg);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // dernière ligne du tableau
+                    &:last-child {
+                        >div:first-child {
+                            align-items: flex-end;
+                            padding-top: 0;
+                            padding-bottom: 3%;
+
+                            div {
+                                align-items: center;
+
+                                img {
+                                    transform: rotate(-90deg);
+                                    width: 50%;
+                                    transition: .5s;
+                                }
+                            }
+                        }
+                        >div:last-child{
+                            >div{
+                                a{
+                                    height: 50%;
+                                    img{
+                                        height: 100%;
+                                        transition: .5s;
+                                    }
+                                    &:hover{
+                                        img{
+                                            transform: rotate(0);
+                                            transition: .5s;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
             // page index
             &.head {
@@ -577,18 +874,18 @@ body {
                 height: 100vh;
 
                 #text-head {
-                    height: 55%;
-                    max-width: 45%;
+                    height: 80vh;
+                    width: 45%;
+                    padding-top: 20vh;
                     display: flex;
                     flex-direction: column;
-                    justify-content: flex-end;
-                    margin-left: 10%;
+                    justify-content: flex-start;
+                    padding-left: 10%;
                     color: $white;
 
                     h1 {
                         font-family: 'Rye', sans-serif;
                         font-weight: lighter;
-                        margin-top: 10%;
                         text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
                         text-align: left;
                         font-size: $title;
@@ -601,20 +898,32 @@ body {
 
                 }
 
-                @media only screen and (max-width: 1500px) {
-                    height: 100vh;
-
-                    h1 {
-                        text-align: center;
-                    }
-
+                @media screen and (max-width: 960px) {
                     #text-head {
-                        max-width: 100%;
-                        height: 100%;
-                        margin: 0% 5%;
-                        justify-content: center;
+                        width: 70%;
                     }
                 }
+
+                @media screen and (max-width: 720px) {
+                    #text-head {
+                        width: 100%;
+                    }
+                }
+
+                // @media only screen and (max-width: 1500px) {
+                //     height: 100vh;
+
+                //     h1 {
+                //         text-align: center;
+                //     }
+
+                //     #text-head {
+                //         max-width: 100%;
+                //         height: 100%;
+                //         margin: 0% 5%;
+                //         justify-content: center;
+                //     }
+                // }
 
                 @media only screen and (max-width: 800px) {
                     height: 100vh;
@@ -627,7 +936,7 @@ body {
 
                     #text-head {
                         height: 100%;
-                        margin: 0% 5%;
+                        padding: 0% 5%;
                         text-align: center;
                         justify-content: center;
                         align-items: center;
@@ -1506,6 +1815,149 @@ body {
                     font-size: $title;
                 }
             }
+            
+            &#chat{
+                position: absolute;
+                left: 0;
+                bottom: 35%;
+                >div{
+                    position: relative;
+                    >div{
+                        padding-top: 4%;
+                        padding-bottom: 4%;
+                        position: absolute;
+                    }
+                    div#closeChat{
+                        background: $brown;
+                        border-top-right-radius: 50px;
+                        border-bottom-right-radius: 50px;
+                        width: 10vh;
+                        left: 0;
+                        transition: .5s;
+                        &.showChat{
+                            left: -30vw;
+                            transition: .5s;
+                        }
+                        a{
+                            min-width: 5vh;
+                            max-width: 5vh;
+                            width: 5vh;
+                            height: 5vh;
+                            transition: .5s;
+                            display: inherit;
+                            margin-left: auto;
+                            margin-right: 5%;
+                            &:hover{
+                                transform: scale(1.05);
+                                img{
+                                    transform: rotate(-15deg);
+                                }
+                            }
+                            img{
+                                width: inherit;
+                                transition: .5s;
+                            }
+                        }
+                    }
+                    div#openChat{
+                        background: $yellow;
+                        border-top-right-radius: 30px;
+                        width: 25vh;
+                        padding-bottom: .5vh;
+                        left: -30vw;
+                        transition: .5s;
+                        &.showChat{
+                            left: 0;
+                            transition: .5;
+                        }
+                        >a{
+                            min-width: 5vh;
+                            max-width: 5vh;
+                            width: 5vh;
+                            height: 5vh;
+                            transition: .5s;
+                            display: inherit;
+                            position: absolute;
+                            right: 3%;
+                            top: 3%;
+                            &:hover{
+                                transform: scale(1.1);
+                                img{
+                                    transform: rotate(15deg);
+                                }
+                            }
+                            img{
+                                width: inherit;
+                                transition: .5s;
+                            }
+                        }
+                        h2{
+                            width: 100%;
+                            text-align: center;
+                            font-family: $title-font;
+                            font-weight: 100;
+                            margin-top: 0;
+                        }
+                        >div#conteneurChat{
+                            width: 95%;
+                            max-height: 20vh;
+                            padding-bottom: 2%;
+                            overflow-y: auto;
+                            overflow-x: hidden;
+                            margin: auto;
+                            display: flex;
+                            flex-direction: column;
+                            div{
+                                display: flex;
+                                flex-direction: row;
+                                p{
+                                    margin: 0;
+                                    font-size: 14px;
+                                }
+                                p:first-of-type{
+                                    font-weight: 600;
+                                    max-width: 35%;
+                                }
+                                p:last-of-type{
+                                    max-width: 65%;
+                                    padding-left: 2%;
+                                    word-break: break-all;
+                                }
+                            }
+                        }
+                        >div#conteneur-content{
+                            width: 95%;
+                            margin: auto;
+                            display: flex;
+                            justify-content: space-between;
+                            input{
+                                background: transparent;
+                                border-radius: 50px;
+                                border: solid 2px $brown;
+                                color: $brown;
+                                padding-left: 2%;
+                                width: 75%;
+
+                                &::placeholder{
+                                    color: $brown;
+                                }
+                            }
+                            button{
+                                cursor: pointer;
+                                width: 20%;
+                                background: $brown;
+                                color: $yellow;
+                                font-size: 10px;
+                                margin: 0;
+                                padding: 1%;
+                                border: solid 1px $brown;
+                                border-radius: 50px;
+                            }
+                        }
+                    }
+                }
+                
+            }
         }
 
         &#information {
@@ -1548,7 +2000,7 @@ body {
         }
     }
 
-    >section#popUp {
+    >section#popUp, >section#popUpResult {
         $menu: 24px;
         $text: 18px;
 
@@ -1673,7 +2125,17 @@ body {
                     width: 60%;
                 }
             }
-
+            >div.result{
+                margin-top: 5%;
+                div{
+                    display: flex;
+                    justify-content: space-between;
+                    span{
+                        color: $yellow;
+                        margin-bottom: 3%;
+                    }
+                }
+            }
             form {
                 text-align: center;
                 display: flex;
@@ -2055,6 +2517,165 @@ body {
 
                     text-decoration: none;
                     font-family: $text-font !important;
+                }
+            }
+        }
+
+        &.plateau{
+            >div{
+                width: 100%!important;
+                height: 100vh;
+                max-height: none;
+                background: transparent;
+                padding: 0;
+                margin-bottom: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h2{
+                    color: $brown;
+                    font-size: $title;
+                }
+                form{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    flex-direction: row;
+                    input[type=radio]{
+                        display: none;
+                    }
+                    label{
+                        width: 10%;
+                        cursor: pointer;
+                        img{
+                            width: 100%;
+                            filter: grayscale(1);
+                            transition: .5s;
+                            border-radius: 10px;
+                        }
+                    }
+                    input[type=radio]:checked+label img{
+                        filter: grayscale(0);
+                        transition: .5s;
+                    }
+                    div{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding-top: 5%;
+                        input{
+                            font-family: $title-font;
+                        }
+                        a{
+                            @include aStyle($brown, transparent, $brown, $yellow, $brown, $brown);
+                            margin-top: 2%;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            >div#contentParameter{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                a{
+                    width: 25%;
+                    text-decoration: none;
+                    color: $brown;
+                    background: $yellow;
+                    font-family: $title-font;
+                    font-size: $title;
+                    border: solid 2px $yellow;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-radius: 50px;
+                    padding: .5%;
+                    margin-top: 2%;
+                    overflow: hidden;
+                    img{
+                        width: 7vh;
+                        height: 7vh;
+                        background: $brown;
+                        border-radius: 50px;
+                    }
+                    span{
+                        padding-left: 5%;
+                        padding-right: 5%;
+                    }
+                }
+            }
+        }
+    }
+
+    >section#parameter{
+        position: absolute;
+        width: 10%;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        z-index: 5000;
+        >div{
+            position: absolute;
+            right: 0;
+            background: $brown;
+            height: 10vh;
+            width: 100%;
+            border-bottom-left-radius: 50px;
+            border-top-left-radius: 50px;
+            &:first-child{
+                top: 3%;
+                width: 50%;
+                display: flex;
+                align-items: center;
+                a{
+                    min-width: 8vh;
+                    max-width: 8vh;
+                    height: 8vh;
+                    overflow: hidden;
+                    margin-left: 10px;
+                    border-radius: 50px;
+                    &:hover{
+                        transform: rotate(60deg);
+                        transition: .5s;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            &:last-child{
+                bottom: 3%;
+                display: flex;
+                align-items: center;
+                >div:first-child{
+                    min-width: 8vh;
+                    max-width: 8vh;
+                    height: 8vh;
+                    overflow: hidden;
+                    margin-left: 10px;
+                    border: solid 1px $yellow;
+                    border-radius: 50px;
+                }
+                >div:last-child{
+                    width: 100%;
+                    color: $yellow;
+                    font-family: $title-font;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding-left: 2%;
+                    p{
+                        margin: 0;
+                        font-size: $text;
+                    }
+                    h3{
+                        margin: 0;
+                        font-weight: 100;
+                        font-size: $menu;
+                    }
                 }
             }
         }

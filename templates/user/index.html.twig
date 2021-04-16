@@ -273,7 +273,7 @@
                     <div id="infosPart">
                         <div>
                             <label for="valuePseudoModif">Pseudo :</label>
-                            <input type="text" placeholder="Votre pseudo" name="pseudo" id="valuePseudoModif">
+                            <input type="text" placeholder="Votre pseudo" name="pseudo" id="valuePseudoModif" value="{{ user.Pseudo }}">
                         </div>
                         <div>
                             <label for="valueModifMotDePasse">Mot de passe :</label>
@@ -282,15 +282,15 @@
                         </div>
                         <div>
                             <label for="valueModifPrenom">Prénom :</label>
-                            <input type="text" placeholder="Votre prénom" name="firstname" id="valueModifPrenom">
+                            <input type="text" placeholder="Votre prénom" name="firstname" id="valueModifPrenom" value="{{ user.Firstname }}">
                         </div>
                         <div>
                             <label for="valueModifNom">Nom :</label>
-                            <input type="text" placeholder="Votre nom" name="lastname" id="valueModifNom">
+                            <input type="text" placeholder="Votre nom" name="lastname" id="valueModifNom" value="{{ user.Lastname }}">
                         </div>
                         <div>
-                            <label for="valueModifAge">Age :</label>
-                            <input type="number" min="0" max="150" placeholder="Votre âge" name="age" id="valueModifAge">
+                            <label for="valueModifAge">Date de naissance :</label>
+                            <input type="date" name="age" id="valueModifAge" value="{{ user.birthday|date('Y-m-d') }}">
                         </div>
                         <div>
                             <p><span>Email :</span> {{ user.email }}</p>

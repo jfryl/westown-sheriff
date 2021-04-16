@@ -1798,6 +1798,73 @@ body main section#infosProfil > div:nth-child(3) > div#blur {
 body main section#classement {
   padding-bottom: 0;
 }
+body main section#classement #topPlayer {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+body main section#classement #topPlayer > div {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main section#classement #topPlayer > div:nth-child(2) {
+  padding-bottom: 15%;
+}
+body main section#classement #topPlayer > div:nth-child(2) > div:last-child {
+  height: 6vw;
+}
+body main section#classement #topPlayer > div:nth-child(2) > div:last-child img {
+  width: 6vw;
+  height: 6vw;
+}
+body main section#classement #topPlayer > div:nth-child(2) > div:last-child span {
+  font-size: 2.9vw;
+}
+body main section#classement #topPlayer > div > div:first-child {
+  width: 12vw;
+  height: 12vw;
+  border-radius: 50%;
+  border: solid 1px #40281F;
+  overflow: hidden;
+}
+body main section#classement #topPlayer > div > div:first-child img {
+  min-width: 100%;
+  min-height: 100%;
+  width: fit-content;
+  height: fit-content;
+}
+body main section#classement #topPlayer > div > div:last-child {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  width: 100%;
+  height: 5vw;
+}
+body main section#classement #topPlayer > div > div:last-child img {
+  width: 5vw;
+  height: 5vw;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  filter: brightness(0.2);
+  z-index: 0;
+}
+body main section#classement #topPlayer > div > div:last-child span {
+  color: #F2B138;
+  font-family: "Rye";
+  position: relative;
+  font-size: 1.5vw;
+  padding-top: 0.5vw;
+  z-index: 1;
+}
 body main section#classement table {
   width: 100%;
 }

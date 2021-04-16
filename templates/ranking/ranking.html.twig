@@ -1,0 +1,105 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Westown Sheriff | Classement{% endblock %}
+
+{% block body %}
+    <main>
+        <span style="visibility: hidden;" id="top"></span>
+        <section id="classement">
+            <div id="topPlayer">
+                <div>
+                    <div>
+                        <img src="">
+                    </div>
+                    <div>
+                        <img src="{{ asset('assets/img/etoile.png') }}">
+                        <span>2</span>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="">
+                    </div>
+                    <div>
+                        <img src="{{ asset('assets/img/etoile.png') }}">
+                        <span>1</span>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="">
+                    </div>
+                    <div>
+                        <img src="{{ asset('assets/img/etoile.png') }}">
+                        <span>3</span>
+                    </div>
+                </div>
+            </div>
+            <table id="tablePlayer">
+                <thead>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <select name="classement" id="classementPlayer">Classement
+                            <option value="">Option 1</option>
+                            <option value="">Option 2</option>
+                        </select>
+                    </td>
+                    <td>Pseudo</td>
+                    <td>Points totaux gagnés</td>
+                    <td>Ratio de victoire</td>
+                    <td>Points en moyenne par partie</td>
+                    <td></td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+
+                    </td> <!-- etoile -->
+                    <td>
+                        <img src="" alt="Photo de profil du joueur">
+                    </td> <!-- Photo de profil -->
+                    <td>1</td> <!-- classement -->
+                    <td>Deite</td> <!-- pseudo -->
+                    <td>654654 pts</td> <!-- points totaux gagnés -->
+                    <td>100 %</td> <!-- ratio de victoire -->
+                    <td>16 pts</td> <!-- points gagnés en moyenne -->
+                    <td></td> <!-- pop-up -->
+                </tr>
+                <tr>
+                    <td></td> <!-- etoile -->
+                    <td>
+                        <img src="" alt="Photo de profil du joueur">
+                    </td> <!-- Photo de profil -->
+                    <td>1</td> <!-- classement -->
+                    <td>fsdfsdfsdfsfsfsdfsdfsdfsdfsdfsdf</td> <!-- pseudo -->
+                    <td>654654 pts</td> <!-- points totaux gagnés -->
+                    <td>100 %</td> <!-- ratio de victoire -->
+                    <td>16 pts</td> <!-- points gagnés en moyenne -->
+                    <td></td> <!-- pop-up -->
+                </tr>
+                <tr>
+                    <td></td> <!-- etoile -->
+                    <td>
+                        <img src="" alt="Photo de profil du joueur">
+                    </td> <!-- Photo de profil -->
+                    <td>1</td> <!-- classement -->
+                    <td>Deite</td> <!-- pseudo -->
+                    <td>654 pts</td> <!-- points totaux gagnés -->
+                    <td>100 %</td> <!-- ratio de victoire -->
+                    <td>16 pts</td> <!-- points gagnés en moyenne -->
+                    <td></td> <!-- pop-up -->
+                </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="jouer">
+            <img src="{{ asset('assets/img/barillet.png') }}" alt="Illustration d'un barillet">
+            <img src="{{ asset('assets/img/etoile.png') }}" alt="Illustration d'une étoile de shériff">
+            <h2>Prenez le contrôle de la ville !</h2>
+            <a href="">Jouer</a>
+        </section>
+    </main>
+{% endblock %}

@@ -16,19 +16,19 @@
         {{ form_start(registrationForm) }}
             <div id="form-inscription">
                 <div class="cont-form first-row">
-                    {{ form_label(registrationForm.firstname,'Prénom') }}
-                    {{ form_widget(registrationForm.firstname, {
-                        'attr': {'class': 'cont-form first-row',
+                    {{ form_row(registrationForm.firstname, {
+                        'label':'Prénom',
+                        'attr': {
                                  'id':'name',
                                  'placeholder':'Prénom',
-                        }
+                    }
                     }) }}
                 </div>
 
                 <div class="cont-form first-row">
-                    {{ form_label(registrationForm.lastname,'Nom') }}
-                    {{ form_widget(registrationForm.lastname, {
-                        'attr': {'class': 'cont-form first-row',
+                    {{ form_row(registrationForm.lastname, {
+                        'label':'Nom',
+                        'attr': {
                             'id':'surname',
                             'placeholder':'Nom',
                         }
@@ -36,9 +36,9 @@
                 </div>
 
                 <div class="cont-form first-row">
-                    {{ form_label(registrationForm.pseudo,'Pseudo') }}
-                    {{ form_widget(registrationForm.pseudo, {
-                        'attr': {'class': 'cont-form first-row',
+                    {{ form_row(registrationForm.pseudo, {
+                        'label':'Pseudo',
+                        'attr': {
                             'id':'pseudo',
                             'placeholder':'Pseudo',
                         }
@@ -46,9 +46,9 @@
                 </div>
 
                 <div class="cont-form first-row">
-                    {{ form_label(registrationForm.birthday, 'Date de naissance') }}
-                    {{ form_widget(registrationForm.birthday, {
-                        'attr': {'class': 'cont-form first-row',
+                    {{ form_row(registrationForm.birthday, {
+                        'label':'Date de naissance',
+                        'attr': {
                             'id':'bday',
                             'placeholder':'Anniversaire',
                         }
@@ -56,27 +56,27 @@
                 </div>
 
                 <div class="cont-form">
-                    {{ form_label(registrationForm.email, 'Mail') }}
-                    {{ form_widget(registrationForm.email, {
-                        'attr': {'class': 'cont-form first-row',
+                    {{ form_row(registrationForm.email, {
+                            'label':'Mail',
+                            'attr': {
                             'id':'mail',
-                            'placeholder':'Mail',
+                            'placeholder':'Mail'
                         }
                     }) }}
                 </div>
 
                 <div class="cont-form">
-                    {{ form_label(registrationForm.plainPassword, 'Mot de passe') }}
-                    {{ form_widget(registrationForm.plainPassword, {
-                        'attr': {'class': 'cont-form first-row',
+                    {{ form_row(registrationForm.plainPassword, {
+                        'label':'Mot de passe',
+                        'attr': {
                             'id':'passwd',
-                            'placeholder':'Mot de passe',
+                            'placeholder':'Mot de passe'
                         }
                     }) }}
                 </div>
 
                 {{ form_row(registrationForm.agreeTerms, {
-                    label: 'Accepter les Conditions d\'utilisations', 'attr': {'class': 'cont-form first-row'}
+                    label: 'Accepter les Conditions générales d\'utilisations', 'attr': {'class': 'cont-form first-row'}
                 }) }}
             </div>
                 <div id="inscription-link-cont">

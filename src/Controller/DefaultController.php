@@ -35,6 +35,13 @@ class DefaultController extends AbstractController
     }
 
     /**
+     * @Route("/ranking", name="ranking")
+     */
+    public function ranking(): Response
+    {
+        return $this->render('ranking/ranking.html.twig');
+    }
+    /**
      * @Route("/mail", name="send_mail")
      */
     public function sendMail(MailerInterface $mailer)

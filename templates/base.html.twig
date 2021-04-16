@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
     {% block stylesheets %}
 
     {% endblock %}
@@ -41,7 +40,7 @@
                                 <a href="{{ path('user_profil') }}" class="link-nav">Profil</a>
                             </li>
                             <li>
-                                <a href="/jeu/classement.php" class="link-nav">Classement</a>
+                                <a href="{{ path('ranking') }}" class="link-nav">Classement</a>
                             </li>
                         </ul>
                     </li>

@@ -58,7 +58,6 @@
                         </div>
                         <div>
                             <h2>Âge :</h2>
-                            &nbsp;
                             <span>19ans</span> <!-- age du joueur -->
                         </div>
                         <div>
@@ -266,7 +265,7 @@
                 <div>
                     <div id="imgPart">
                         <div>
-                            <img src="/jeu/assets/img/" alt="">
+                            <img src="{{ asset('assets/img/') }}" alt="">
                         </div>
                         <label for="filesProfil">Modifier Avatar</label>
                         <input type="file" id="filesProfil">
@@ -319,7 +318,7 @@
                     </div>
                     <div id="infosPart">
                         <div>
-                            <p><span>Pseudo :</span> Pseudo</p>
+                            <p><span>Pseudo :</span> {{ user.Pseudo }}</p>
                         </div>
                         <div>
                             <label for="showModifMotDePasse">Mot de passe :</label>
@@ -327,16 +326,16 @@
                             <span id="buttonShowMotDePasse"></span>
                         </div>
                         <div>
-                            <p><span>Prénom :</span> Prénom de l'utilisateur</p>
+                            <p><span>Prénom :</span> {{ user.Firstname }}</p>
                         </div>
                         <div>
-                            <p><span>Nom :</span> Nom de l'utilisateur</p>
+                            <p><span>Nom :</span> {{ user.Lastname }}</p>
                         </div>
                         <div>
                             <p><span>Age :</span> Age de l'utilisateur</p>
                         </div>
                         <div>
-                            <p><span>Email :</span> Mail l'utilisateur</p>
+                            <p><span>Email :</span> {{ user.email }}</p>
                         </div>
                     </div>
                 </div>

@@ -177,6 +177,7 @@
     <div id="contentSecret">
         <h2>Action secret</h2>
         <form action="" method="POST">
+
             {% for card in moi.handCards%}
                 <input type="radio" name="choixSecret" id="{{ numero[loop.index] }}ChoixSecret">
                 <label for="{{ numero[loop.index] }}ChoixSecret">

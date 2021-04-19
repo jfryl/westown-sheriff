@@ -17,7 +17,7 @@
             </div>
             <div>
                 <div>
-                    <img src="" alt="">
+                    <img src="{{ asset('assets/img/'~user.picture) }}" alt="">
                 </div>
                 <div>
                     <h1>Salut Shérif <span>{{ user.Pseudo }}
@@ -265,7 +265,7 @@
                 <div>
                     <div id="imgPart">
                         <div>
-                            <img src="{{ asset('assets/img/') }}" alt="">
+                            <img src="{{ asset('assets/img/'~user.picture) }}" alt="">
                         </div>
                         <label for="filesProfil">Modifier Avatar</label>
                         <input type="file" id="filesProfil">
@@ -289,8 +289,8 @@
                             <input type="text" placeholder="Votre nom" name="lastname" id="valueModifNom" value="{{ user.Lastname }}">
                         </div>
                         <div>
-                            <label for="valueModifAge">Date de naissance :</label>
-                            <input type="date" name="age" id="valueModifAge" value="{{ user.birthday|date('Y-m-d') }}">
+                            <label for="valueModifAge">Date :</label>
+                            <input type="date" name="birthday" id="valueModifAge">
                         </div>
                         <div>
                             <p><span>Email :</span> {{ user.email }}</p>
@@ -313,7 +313,7 @@
                 <div>
                     <div id="imgPart">
                         <div>
-                            <img src="/jeu/assets/img/" alt="">
+                            <img src="{{ asset('assets/img/'~user.picture) }}" alt="">
                         </div>
                     </div>
                     <div id="infosPart">
@@ -374,7 +374,7 @@
                         </g>
                     </g>
                 </svg>
-                <p>Vous n'avez affronté aucun joueur récement</p>
+                <p>Vous n'avez affronté aucun joueur récemment</p>
             </div>
 
             <!-- <form action="" method="POST">
@@ -482,7 +482,7 @@
                         </g>
                     </g>
                 </svg>
-                <p>Vous n'avez affronté aucun joueur récement</p>
+                <p>Vous n'avez affronté aucun joueur récemment</p>
             </div>
             <!-- si l'utilisateur à déjà fait une game
             <form action="" method="POST">

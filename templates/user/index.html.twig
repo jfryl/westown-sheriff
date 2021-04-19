@@ -290,7 +290,7 @@
                         </div>
                         <div>
                             <label for="valueModifAge">Date :</label>
-                            <input type="date" name="birthday" id="valueModifAge">
+                            <input type="date" name="birthday" id="valueModifAge" value="{{ user.birthday|date("Y-m-d") }}">
                         </div>
                         <div>
                             <p><span>Email :</span> {{ user.email }}</p>
